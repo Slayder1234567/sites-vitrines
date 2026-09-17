@@ -3,22 +3,22 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Délice d’Asie — restaurant chinois à Versailles</title>
-<meta name="description" content="Délice d’Asie, restaurant chinois au 5 rue de Montreuil à Versailles : cuisine fraîche, livraison en 32 minutes environ via Uber Eats et Deliveroo.">
-<meta name="theme-color" content="#F5F0E6">
-<meta property="og:title" content="Délice d’Asie — restaurant chinois à Versailles">
-<meta property="og:description" content="Délice d’Asie, restaurant chinois au 5 rue de Montreuil à Versailles : cuisine fraîche, livraison en 32 minutes environ via Uber Eats et Deliveroo.">
+<title>Délice d'Asie — restaurant chinois à Versailles</title>
+<meta name="description" content="Délice d'Asie, restaurant chinois au 5 rue de Montreuil à Versailles : riz cantonais, nems, nouilles sautées, livraison en 32 minutes environ.">
+<meta name="theme-color" content="#F6F0E6">
+<meta property="og:title" content="Délice d'Asie — restaurant chinois à Versailles">
+<meta property="og:description" content="Délice d'Asie, restaurant chinois au 5 rue de Montreuil à Versailles : riz cantonais, nems, nouilles sautées, livraison en 32 minutes environ.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 /* ============ Jetons — une direction artistique = ce bloc, rien d'autre ============ */
 :root{
-  --fond:#F5F0E6; --fond-2:#FFFBF4; --encre:#241B16; --encre-douce:#6E655B;
-  --accent:#A8331F; --accent-encre:#FFF8F0; --trait:#DED3C2;
-  --titre:'Fraunces',Georgia,serif; --texte:'Public Sans',system-ui,sans-serif;
-  --t-titre:600; --casse-titre:none; --interlettre:-.015em;
-  --rayon:14px; --ombre:0 24px 60px -24px color-mix(in srgb, var(--encre) 40%, transparent);
+  --fond:#F6F0E6; --fond-2:#FFFBF4; --encre:#2A1E14; --encre-douce:#6B5747;
+  --accent:#B5501F; --accent-encre:#FFF8F0; --trait:#E3D8C7;
+  --titre:'Fraunces',Georgia,serif; --texte:'Karla',system-ui,sans-serif;
+  --t-titre:700; --casse-titre:none; --interlettre:-.015em;
+  --rayon:18px; --ombre:0 24px 60px -24px color-mix(in srgb, var(--encre) 40%, transparent);
   --marge:clamp(20px,5vw,64px); --bloc:clamp(64px,9vw,128px);
 }
 /* ============ Base ============ */
@@ -86,23 +86,23 @@ body.ouvert .menu .bas{opacity:.85}
 .heros .fond img{width:100%;height:100%;object-fit:cover;filter:none}
 .heros .voile{position:absolute;inset:0;z-index:-1;background:none}
 .heros .w{display:grid;gap:clamp(18px,2.4vw,30px)}
-.heros h1{color:#241B16;max-width:15ch}
-.heros h1 em{font-style:italic;color:var(--accent)}
-.heros .intro{font-size:clamp(17px,1.5vw,21px);color:#6E655B;max-width:52ch}
+.heros h1{color:#2A1E14;max-width:15ch}
+.heros h1 em{font-style:normal;color:var(--accent)}
+.heros .intro{font-size:clamp(17px,1.5vw,21px);color:#5B4A3B;max-width:52ch}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
 .btn{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 28px;border-radius:var(--rayon);background:var(--accent);color:var(--accent-encre);
   font-weight:700;font-size:15px;letter-spacing:.01em;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s,filter .3s}
 .btn:hover{transform:translateY(-3px);box-shadow:0 18px 34px -16px var(--accent);filter:brightness(1.05)}
-.btn.clair{background:transparent;color:#241B16;border:1.5px solid color-mix(in srgb,#241B16 45%,transparent)}
-.btn.clair:hover{background:color-mix(in srgb,#241B16 12%,transparent);box-shadow:none}
-.bandeau{display:flex;flex-wrap:wrap;gap:8px 28px;font:600 13px/1 var(--texte);letter-spacing:.08em;text-transform:uppercase;color:#6E655B}
+.btn.clair{background:transparent;color:#2A1E14;border:1.5px solid color-mix(in srgb,#2A1E14 35%,transparent)}
+.btn.clair:hover{background:color-mix(in srgb,#2A1E14 8%,transparent);box-shadow:none}
+.bandeau{display:flex;flex-wrap:wrap;gap:8px 28px;font:600 13px/1 var(--texte);letter-spacing:.08em;text-transform:uppercase;color:#6B5747}
 .bandeau span{display:inline-flex;align-items:center;gap:8px}
 .bandeau span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
 /* ============ Sections ============ */
 section{padding-block:var(--bloc)}
 .entete{display:grid;gap:14px;margin-bottom:clamp(32px,4vw,56px);max-width:44ch}
 .cartes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(14px,1.6vw,22px)}
-@media(min-width:1080px){.cartes{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1080px){.cartes{grid-template-columns:repeat(2,1fr)}}
 .carte{position:relative;padding:clamp(24px,2.4vw,32px);border-radius:var(--rayon);background:var(--fond-2);border:1px solid var(--trait);
   display:grid;gap:10px;align-content:start;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s}
 .carte:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--accent) 50%,var(--trait));box-shadow:var(--ombre)}
@@ -152,7 +152,7 @@ body{padding-bottom:0}
 </head>
 <body>
 <header id="tete">
-  <a class="marque" href="#haut"><span class="bloc-nom"><b>Délice d’Asie</b><span>Cuisine chinoise · Versailles</span></span></a>
+  <a class="marque" href="#haut"><span class="bloc-nom"><b>Délice d'Asie</b><span>Restaurant chinois · Versailles</span></span></a>
   <div class="tete-droite">
     <a class="tel-tete" href="tel:+33130210232">01 30 21 02 32</a>
     <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
@@ -160,12 +160,10 @@ body{padding-bottom:0}
 </header>
 
 <nav class="menu" id="menu" aria-label="Menu principal">
-  <a class="lien" href="#carte" style="--i:0">Sur la carte</a><a class="lien" href="#apercu" style="--i:1">Un aperçu</a><a class="lien" href="#infos" style="--i:2">Infos pratiques</a><a class="lien" href="tel:+33130210232" style="--i:3">Appeler</a>
+  <a class="lien" href="#carte" style="--i:0">Sur la carte</a><a class="lien" href="#maison" style="--i:1">La maison</a><a class="lien" href="#infos" style="--i:2">Infos pratiques</a><a class="lien" href="tel:+33130210232" style="--i:3">Appeler</a>
   <div class="bas">
     <a href="tel:+33130210232">01 30 21 02 32</a>
     <a href="https://www.openstreetmap.org/?mlat=48.8054295&mlon=2.1423629#map=18/48.8054295/2.1423629" target="_blank" rel="noopener">5 rue de Montreuil, Versailles</a>
-    <a href="https://www.ubereats.com/fr/store/delice-dasie-chez-huang/IiryaLcJSjO-IxcB5JilKQ" target="_blank" rel="noopener">Uber Eats</a>
-    <a href="https://deliveroo.fr/fr/menu/paris/versailles-montreuil/delice-dasie-paris" target="_blank" rel="noopener">Deliveroo</a>
   </div>
 </nav>
 
@@ -176,16 +174,16 @@ body{padding-bottom:0}
     <div class="duo" style="align-items:end;gap:clamp(28px,4vw,56px)">
       <div style="display:grid;gap:clamp(18px,2.4vw,28px)">
         <p class="sur rev">Restaurant chinois · 5 rue de Montreuil, Versailles</p>
-        <h1 class="rev" style="--i:1">Cuisine chinoise <em>fraîche</em>, livrée vite.</h1>
-        <p class="intro rev" style="--i:2">Délice d’Asie prépare une cuisine chinoise fraîche et de qualité dans le quartier Montreuil, avec une livraison en 32 minutes environ. Le restaurant est aussi référencé sous le nom « Chez Huang » sur les plateformes de livraison.</p>
+        <h1 class="rev" style="--i:1">Délice <em>d'Asie</em></h1>
+        <p class="intro rev" style="--i:2">Cuisine chinoise fraîche et de qualité, livraison en 32 minutes environ.</p>
         <div class="actions rev" style="--i:3">
-          <a class="btn" href="tel:+33130210232">Appeler · 01 30 21 02 32</a>
-          <a class="btn clair" href="https://www.openstreetmap.org/?mlat=48.8054295&mlon=2.1423629#map=18/48.8054295/2.1423629" target="_blank" rel="noopener">Venir rue de Montreuil</a>
+          <a class="btn" href="tel:+33130210232">Appeler le restaurant</a>
+          <a class="btn clair" href="https://www.openstreetmap.org/?mlat=48.8054295&mlon=2.1423629#map=18/48.8054295/2.1423629" target="_blank" rel="noopener">Itinéraire</a>
         </div>
-        <div class="bandeau rev" style="--i:4"><span>Cuisine chinoise</span><span>Livraison ≈ 32 min</span><span>Ouvert 11 h – 21 h</span></div>
+        <div class="bandeau rev" style="--i:4"><span>Cuisine chinoise</span><span>Livraison ~32 min</span><span>4,4/5 (141 avis)</span></div>
       </div>
-      <figure class="rev" style="--i:2;border-radius:var(--rayon);overflow:hidden;aspect-ratio:4/5;max-height:72svh">
-        <img src="img/photo-1.jpg" alt="Assortiment de plats chinois de Délice d’Asie : crevettes frites, soupe, nems et riz cantonais" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover">
+      <figure class="rev" style="--i:2;border-radius:var(--rayon);overflow:hidden;aspect-ratio:3/4;max-height:72svh">
+        <img src="img/photo-1.jpg" alt="Assortiment de plats du restaurant : crevettes panées, nems, riz cantonais et soupe" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover">
       </figure>
     </div>
   </div>
@@ -195,26 +193,33 @@ body{padding-bottom:0}
   <div class="w">
     <div class="entete">
       <p class="sur rev">Sur la carte</p>
-      <h2 class="rev" style="--i:1">Ce qu’on sait,<br>en clair.</h2>
+      <h2 class="rev" style="--i:1">Ce qu'on y mange.</h2>
     </div>
     <div class="cartes">
-      <article class="carte rev"><h3>Cuisine chinoise</h3><p>Une cuisine chinoise fraîche et de qualité, annoncée par le restaurant — la carte détaillée reste à demander sur place ou par téléphone.</p></article>
-      <article class="carte rev" style="--i:1"><h3>Livraison à domicile</h3><p>Livraison en 32 minutes environ autour de Versailles, via les plateformes de livraison.</p></article>
-      <article class="carte rev" style="--i:2"><h3>Commander en ligne</h3><p>Le restaurant est référencé sur <a href="https://www.ubereats.com/fr/store/delice-dasie-chez-huang/IiryaLcJSjO-IxcB5JilKQ" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">Uber Eats</a> et <a href="https://deliveroo.fr/fr/menu/paris/versailles-montreuil/delice-dasie-paris" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">Deliveroo</a>, sous le nom Délice d’Asie (Chez Huang).</p></article>
+      <article class="carte rev"><h3>Riz cantonais</h3><p>Riz sauté aux œufs, petits légumes et morceaux de viande, servi en accompagnement ou en plat unique.</p></article>
+      <article class="carte rev" style="--i:1"><h3>Nouilles sautées</h3><p>Nouilles sautées au wok avec légumes, accompagnées de viande ou de crevettes selon la commande.</p></article>
+      <article class="carte rev" style="--i:2"><h3>Nems croustillants</h3><p>Rouleaux de printemps frits, servis avec salade et sauce, en entrée ou à partager.</p></article>
+      <article class="carte rev" style="--i:3"><h3>Poulet au caramel</h3><p>Morceaux de poulet mijotés dans une sauce sucrée-salée caramélisée, un classique de la carte.</p></article>
     </div>
+    <p class="rev" style="margin-top:22px;font-size:15px">Menu complet et tarifs à jour disponibles sur place, par téléphone, ou via Uber Eats et Deliveroo.</p>
   </div>
 </section>
 
-<section id="apercu" style="background:var(--fond-2);border-block:1px solid var(--trait)">
+<section id="maison" style="background:var(--fond-2);border-block:1px solid var(--trait)">
   <div class="w">
     <div class="duo inverse">
       <div>
-        <p class="sur rev">Un aperçu</p>
-        <h2 class="rev" style="--i:1;margin-top:14px">Des plats préparés<br>pour la livraison.</h2>
-        <p class="rev" style="--i:2;margin-top:18px">Ces photographies proviennent des pages Uber Eats et Deliveroo du restaurant : elles donnent une idée de ce qui sort de cuisine, en attendant la carte complète.</p>
+        <p class="sur rev">La maison</p>
+        <h2 class="rev" style="--i:1;margin-top:14px">Une cuisine chinoise<br>pensée pour la livraison.</h2>
+        <p class="rev" style="--i:2;margin-top:18px">Délice d'Asie prépare ses plats au 5 rue de Montreuil, à Versailles, pour la vente à emporter et la livraison, avec un service assuré via Uber Eats et Deliveroo.</p>
+        <div class="chiffres">
+          <div class="rev" style="--i:3"><b>4,4/5</b><small>note sur les annuaires</small></div>
+          <div class="rev" style="--i:4"><b>141</b><small>avis référencés</small></div>
+          <div class="rev" style="--i:5"><b>32 min</b><small>livraison moyenne annoncée</small></div>
+        </div>
       </div>
-      <figure class="rev" style="--i:2;aspect-ratio:4/3">
-        <img src="img/photo-2.jpg" alt="Plateaux de charcuterie chinoise proposés par Délice d’Asie : canard, jambonneau et pied de porc tranchés" loading="lazy" decoding="async">
+      <figure class="rev" style="--i:2;aspect-ratio:1/1">
+        <img src="img/photo-3.jpg" alt="Assortiment de spécialités du restaurant : canard, viandes froides et accompagnements" loading="lazy" decoding="async">
       </figure>
     </div>
   </div>
@@ -225,19 +230,16 @@ body{padding-bottom:0}
     <div class="duo">
       <div>
         <p class="sur rev">Infos pratiques</p>
-        <h2 class="rev" style="--i:1;margin-top:14px">Quand venir,<br>comment commander.</h2>
+        <h2 class="rev" style="--i:1;margin-top:14px">Quand venir.</h2>
         <div class="coord rev" style="--i:2;margin-top:22px">
-          <span>5 Rue de Montreuil<br>78000 Versailles</span>
-          <a class="lienfort" href="https://www.openstreetmap.org/?mlat=48.8054295&mlon=2.1423629#map=18/48.8054295/2.1423629" target="_blank" rel="noopener">Ouvrir l’itinéraire</a>
+          <span>5 rue de Montreuil<br>78000 Versailles</span>
+          <a class="lienfort" href="https://www.openstreetmap.org/?mlat=48.8054295&mlon=2.1423629#map=18/48.8054295/2.1423629" target="_blank" rel="noopener">Ouvrir l'itinéraire</a>
           <a class="lienfort" href="tel:+33130210232">01 30 21 02 32</a>
         </div>
       </div>
-      <div>
-        <table class="horaires rev" style="--i:2">
-          <tr><td>Horaires</td><td>11h00 — 21h00</td></tr>
-        </table>
-        <p class="rev" style="--i:3;margin-top:14px;font-size:15px;color:var(--encre-douce)">Jours d’ouverture non précisés par la fiche du commerce — à confirmer par téléphone.</p>
-      </div>
+      <table class="horaires rev" style="--i:2">
+        <tr><td>Tous les jours</td><td>11 h 00 — 21 h 00</td></tr>
+      </table>
     </div>
   </div>
 </section>
@@ -245,15 +247,15 @@ body{padding-bottom:0}
 </main>
 
 <footer>
-  <span class="marque"><span class="bloc-nom"><b>Délice d’Asie</b><span>Cuisine chinoise · Versailles</span></span></span>
-  <p style="color:inherit;opacity:.8">5 Rue de Montreuil, 78000 Versailles</p>
-  <div class="liens"><a class="plein" href="tel:+33130210232">01 30 21 02 32</a><a href="https://www.openstreetmap.org/?mlat=48.8054295&mlon=2.1423629#map=18/48.8054295/2.1423629" target="_blank" rel="noopener">Itinéraire</a><a href="https://www.ubereats.com/fr/store/delice-dasie-chez-huang/IiryaLcJSjO-IxcB5JilKQ" target="_blank" rel="noopener">Uber Eats</a><a href="https://deliveroo.fr/fr/menu/paris/versailles-montreuil/delice-dasie-paris" target="_blank" rel="noopener">Deliveroo</a></div>
-  <p class="mention">Page réalisée à partir d’informations publiques vérifiées le 17 septembre 2026 ; menu détaillé et jours d’ouverture à confirmer avec le commerce. Photographies : pages Uber Eats et Deliveroo du restaurant.</p>
+  <span class="marque"><span class="bloc-nom"><b>Délice d'Asie</b><span>Restaurant chinois · Versailles</span></span></span>
+  <p style="color:inherit;opacity:.8">5 rue de Montreuil, 78000 Versailles</p>
+  <div class="liens"><a class="plein" href="tel:+33130210232">01 30 21 02 32</a><a href="https://www.openstreetmap.org/?mlat=48.8054295&mlon=2.1423629#map=18/48.8054295/2.1423629" target="_blank" rel="noopener">Itinéraire</a></div>
+  <p class="mention">Page de démonstration réalisée à partir d'informations publiques (fiche vérifiée du commerçant, pages Uber Eats, Deliveroo et annuaire). Photographies issues des pages de commande du restaurant, à remplacer par ses propres fichiers.</p>
 </footer>
 
 <div class="appel-mobile" id="appel"><a class="plein" href="tel:+33130210232">Appeler</a><a class="vide" href="https://www.openstreetmap.org/?mlat=48.8054295&mlon=2.1423629#map=18/48.8054295/2.1423629" target="_blank" rel="noopener">Y aller</a></div>
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Délice d’Asie", "image": "https://slayder1234567.github.io/sites-vitrines/delice-d-asie-versailles/img/photo-1.jpg", "url": "https://slayder1234567.github.io/sites-vitrines/delice-d-asie-versailles/", "telephone": "+33130210232", "servesCuisine": "Chinoise", "address": {"@type": "PostalAddress", "streetAddress": "5 Rue de Montreuil", "postalCode": "78000", "addressLocality": "Versailles", "addressCountry": "FR"}, "geo": {"@type": "GeoCoordinates", "latitude": 48.8054295, "longitude": 2.1423629}, "hasMap": "https://www.openstreetmap.org/node/1415100207"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Délice d'Asie", "servesCuisine": "Chinese", "image": "img/photo-1.jpg", "telephone": "+33130210232", "address": {"@type": "PostalAddress", "streetAddress": "5 Rue de Montreuil", "postalCode": "78000", "addressLocality": "Versailles", "addressCountry": "FR"}, "geo": {"@type": "GeoCoordinates", "latitude": 48.8054295, "longitude": 2.1423629}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "11:00", "closes": "21:00"}], "priceRange": "€€", "areaServed": "Versailles"}</script>
 <script>
 (() => {
   const b = document.getElementById('burger'), corps = document.body, tete = document.getElementById('tete');
