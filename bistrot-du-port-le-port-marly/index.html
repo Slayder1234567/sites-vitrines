@@ -1,111 +1,274 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bistrot du Port — Le Port-Marly</title>
-<meta name="description" content="Bistrot du Port, 10 rue Jean Jaurès au Port-Marly : cuisine mêlant fruits de mer et spécialités italiennes, décor bistrot chaleureux au bord de Seine.">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Public+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bistrot du Port — restaurant au Port-Marly</title>
+<meta name="description" content="Le Bistrot du Port, restaurant au Port-Marly : fruits de mer et spécialités italiennes au bord de Seine, 10 rue Jean Jaurès. Appelez pour réserver une table.">
+<meta name="theme-color" content="#F6F0E6">
+<meta property="og:title" content="Bistrot du Port — restaurant au Port-Marly">
+<meta property="og:description" content="Le Bistrot du Port, restaurant au Port-Marly : fruits de mer et spécialités italiennes au bord de Seine, 10 rue Jean Jaurès. Appelez pour réserver une table.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--papier:#F3EFE6;--encre:#182228;--gris:#5A5D57;--marine:#1E4E5C;--terracotta:#A6501F;--ligne:#D8D2C3}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
-body{background:var(--papier);color:var(--encre);font:300 16px/1.6 "Public Sans",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit;text-decoration:none}.w{max-width:1160px;margin:0 auto;padding:0 32px}
-header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:24px 32px;border-bottom:1px solid var(--ligne)}
-.logo{font:600 21px "Fraunces",serif;letter-spacing:-.02em}.logo small{display:block;font:300 12px "Public Sans";letter-spacing:.1em;text-transform:uppercase;color:var(--gris);margin-top:3px}
-nav{display:flex;gap:22px;font-size:15px;letter-spacing:.1em;text-transform:uppercase}
-nav a{position:relative;min-height:44px;display:inline-flex;align-items:center}nav a::after{content:"";position:absolute;left:0;bottom:10px;width:0;height:1px;background:var(--terracotta);transition:width .4s}nav a:hover::after{width:100%}
-.hero{display:grid;grid-template-columns:7fr 5fr;gap:40px;padding:52px 0 56px;align-items:end}
-.num{font:300 15px "Public Sans";letter-spacing:.15em;text-transform:uppercase;color:var(--gris);margin-bottom:20px}
-.hero h1{font:300 clamp(38px,6.4vw,72px)/1.05 "Fraunces",serif;letter-spacing:-.02em}
-.hero h1 em{font-style:italic;color:var(--marine)}
-.hero p{max-width:420px;color:var(--gris);font-size:17px;margin-top:18px}
-.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
-.btn{display:inline-flex;align-items:center;min-height:48px;background:var(--terracotta);color:#FBF6EC;padding:0 24px;border-radius:2px;font-weight:500;font-size:15px;letter-spacing:.02em;transition:transform .3s}
-.btn:hover{transform:translateY(-2px)}
-.btn.l{background:transparent;color:var(--encre);border:1px solid var(--encre)}
-.img{aspect-ratio:4/5;position:relative;overflow:hidden;border-radius:2px;background:linear-gradient(160deg,var(--marine),#0E2C35 75%);display:grid;place-items:center;color:#CFE0DF;font:italic 300 14px "Fraunces",serif}
-.img::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 44px,rgba(0,0,0,.08) 44px 45px)}
-section{padding:52px 0;border-top:1px solid var(--ligne)}
-h2{font:300 34px/1.1 "Fraunces",serif;letter-spacing:-.02em}h2 span{display:block;font:italic 300 15px "Public Sans";color:var(--marine);margin-top:6px;text-transform:none;letter-spacing:0}
-.carte{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:32px}
-.carte h3{font:600 19px "Fraunces",serif;margin-bottom:8px}.carte p{font-size:15px;color:var(--gris)}
-.note{margin-top:26px;font-size:15px;color:var(--gris);font-style:italic}
-.manifeste{display:grid;grid-template-columns:4fr 8fr;gap:32px}
-.manifeste p{font:300 clamp(22px,2.6vw,32px)/1.35 "Fraunces",serif;letter-spacing:-.01em}
-.manifeste em{font-style:italic;color:var(--marine)}
-.infos{display:grid;grid-template-columns:.9fr 1.1fr;gap:36px;align-items:center}
-.adresse{font-size:17px;line-height:1.55}
-.adresse a{color:var(--marine);font-weight:600;border-bottom:1px solid var(--terracotta);display:inline-block;margin-top:10px;min-height:44px;line-height:44px}
-table{width:100%;border-collapse:collapse;font-size:16px}
-td{padding:12px 0;border-bottom:1px dashed var(--ligne);vertical-align:top}
-td:last-child{text-align:right}
-.compl{color:var(--marine);font-style:italic}
-footer{background:var(--encre);color:var(--papier);padding:40px 32px;text-align:center}
-footer b{font:600 22px "Fraunces",serif;display:block;margin-bottom:6px}
-footer p{font-size:15px;opacity:.85}
-.contact{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:20px 0 12px}
-.contact a{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:2px;border:1px solid rgba(243,239,230,.4);font-weight:500;font-size:15px}
-.contact a.tel{background:var(--terracotta);color:#FBF6EC;border-color:var(--terracotta)}
-footer small{display:block;font-size:15px;opacity:.6;margin-top:14px}
-.r{opacity:0;transform:translateY(18px);animation:r .9s cubic-bezier(.16,1,.3,1) forwards}.r2{animation-delay:.12s}
-@keyframes r{to{opacity:1;transform:none}}
-@media(max-width:900px){
-.w{padding:0 20px}
-header{padding:20px 20px}nav{gap:14px}
-.hero{grid-template-columns:1fr;gap:26px;padding:32px 0 40px}
-.img{aspect-ratio:16/10;max-width:100%}
-.carte{grid-template-columns:1fr;gap:22px;margin-top:24px}
-.manifeste{grid-template-columns:1fr;gap:16px}
-.infos{grid-template-columns:1fr;gap:24px}
-section{padding:40px 0}
+/* ============ Jetons — une direction artistique = ce bloc, rien d'autre ============ */
+:root{
+  --fond:#F6F0E6; --fond-2:#FFFBF4; --encre:#2A1E14; --encre-douce:#6B5747;
+  --accent:#B5501F; --accent-encre:#FFF8F0; --trait:#E3D8C7;
+  --titre:'Fraunces',Georgia,serif; --texte:'Karla',system-ui,sans-serif;
+  --t-titre:700; --casse-titre:none; --interlettre:-.015em;
+  --rayon:18px; --ombre:0 24px 60px -24px color-mix(in srgb, var(--encre) 40%, transparent);
+  --marge:clamp(20px,5vw,64px); --bloc:clamp(64px,9vw,128px);
 }
-</style></head><body>
+/* ============ Base ============ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--fond);color:var(--encre);font:400 clamp(16px,1.05vw,17px)/1.6 var(--texte);overflow-x:hidden;font-synthesis:none;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.w{width:min(100% - var(--marge)*2,1280px);margin-inline:auto}
+h1,h2,h3{font-family:var(--titre);font-weight:var(--t-titre);line-height:.98;letter-spacing:var(--interlettre);text-transform:var(--casse-titre);text-wrap:balance}
+h1{font-size:clamp(44px,8.2vw,112px)}
+h2{font-size:clamp(32px,5vw,64px)}
+h3{font-size:clamp(19px,1.6vw,23px);line-height:1.15}
+.sur{font:600 12px/1 var(--texte);letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+p{max-width:62ch;color:var(--encre-douce)}
+/* ============ Barre du haut + menu à trois barres ============ */
+header{position:fixed;inset:0 0 auto;z-index:90;display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:14px var(--marge);background:color-mix(in srgb,var(--fond) 82%,transparent);
+  backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid transparent;transition:border-color .3s,padding .3s,background .3s}
+header.file{border-bottom-color:var(--trait);padding-block:9px}
+.marque{display:flex;align-items:center;gap:12px;min-height:44px}
+.marque img{height:clamp(34px,4.2vw,46px);width:auto;border-radius:6px}
+.marque b{font-family:var(--titre);font-weight:var(--t-titre);font-size:clamp(17px,1.5vw,21px);letter-spacing:var(--interlettre);text-transform:var(--casse-titre);line-height:1}
+.marque span{display:block;font:500 11px/1.3 var(--texte);letter-spacing:.13em;text-transform:uppercase;color:var(--encre-douce)}
+.tete-droite{display:flex;align-items:center;gap:10px}
+.tel-tete{display:none;align-items:center;gap:8px;min-height:44px;padding:0 20px;border-radius:999px;background:var(--accent);color:var(--accent-encre);font-weight:700;font-size:14px;letter-spacing:.01em;transition:transform .25s cubic-bezier(.22,1,.36,1),filter .25s}
+.tel-tete:hover{transform:translateY(-2px);filter:brightness(1.06)}
+@media(min-width:900px){.tel-tete{display:inline-flex}}
+body.ouvert header{background:transparent;backdrop-filter:none;border-color:transparent}
+body.ouvert .marque,body.ouvert .tel-tete{opacity:0;pointer-events:none;transition:opacity .25s}
+.marque,.tel-tete{transition:opacity .3s}
+.burger{position:relative;z-index:80;width:52px;height:52px;display:grid;place-items:center;border-radius:50%;border:1px solid var(--trait);transition:background .3s,border-color .3s,transform .3s}
+.burger:hover{transform:scale(1.06)}
+.burger span{position:absolute;left:15px;width:22px;height:2px;border-radius:2px;background:var(--encre);transition:transform .45s cubic-bezier(.76,0,.24,1),opacity .2s,background .3s}
+.burger span:nth-child(1){transform:translateY(-6px)}
+.burger span:nth-child(3){transform:translateY(6px)}
+body.ouvert .burger{border-color:color-mix(in srgb,var(--fond) 40%,transparent)}
+body.ouvert .burger span{background:var(--fond)}
+body.ouvert .burger span:nth-child(1){transform:rotate(45deg)}
+body.ouvert .burger span:nth-child(2){opacity:0;transform:scaleX(.2)}
+body.ouvert .burger span:nth-child(3){transform:rotate(-45deg)}
+.menu{position:fixed;inset:0;z-index:70;background:var(--encre);color:var(--fond);display:grid;align-content:center;
+  gap:6px;padding:96px var(--marge) calc(40px + env(safe-area-inset-bottom));
+  clip-path:circle(0% at calc(100% - 44px) 44px);transition:clip-path .7s cubic-bezier(.76,0,.24,1);visibility:hidden}
+body.ouvert .menu{clip-path:circle(150% at calc(100% - 44px) 44px);visibility:visible}
+.menu a.lien{font-family:var(--titre);font-weight:var(--t-titre);text-transform:var(--casse-titre);letter-spacing:var(--interlettre);
+  font-size:clamp(34px,6.4vw,72px);line-height:1.04;padding:6px 0;opacity:0;transform:translateY(24px);
+  transition:opacity .5s ease-out,transform .5s cubic-bezier(.22,1,.36,1),color .25s;transition-delay:calc(var(--i)*70ms + 120ms)}
+body.ouvert .menu a.lien{opacity:1;transform:none}
+.menu a.lien:hover{color:var(--accent)}
+.menu .bas{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:36px;padding-top:26px;border-top:1px solid color-mix(in srgb,var(--fond) 22%,transparent);
+  font-size:15px;opacity:0;transition:opacity .5s ease-out .5s}
+body.ouvert .menu .bas{opacity:.85}
+.menu .bas a{min-height:44px;display:inline-flex;align-items:center;border-bottom:1px solid transparent}
+.menu .bas a:hover{border-bottom-color:var(--accent)}
+/* ============ Apparitions au défilement ============ */
+.rev{opacity:0;transform:translateY(28px);transition:opacity .8s ease-out,transform .8s cubic-bezier(.22,1,.36,1);transition-delay:calc(var(--i,0)*80ms)}
+.rev.vu{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}.rev{opacity:1;transform:none}}
+/* ============ Héros ============ */
+.heros{position:relative;min-height:clamp(520px,80svh,820px);display:grid;align-items:center;padding:clamp(104px,12vh,150px) 0 clamp(48px,7vw,88px);overflow:hidden}
+.heros .fond{position:absolute;inset:0;z-index:-2}
+.heros .fond img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05)}
+.heros .voile{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(42,30,20,.15) 0%,rgba(42,30,20,.45) 55%,rgba(42,30,20,.85) 100%)}
+.heros .w{display:grid;gap:clamp(18px,2.4vw,30px)}
+.heros h1{color:#2A1E14;max-width:15ch}
+.heros h1 em{font-style:normal;color:var(--accent)}
+.heros .intro{font-size:clamp(17px,1.5vw,21px);color:#6B5747;max-width:52ch}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 28px;border-radius:var(--rayon);background:var(--accent);color:var(--accent-encre);
+  font-weight:700;font-size:15px;letter-spacing:.01em;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s,filter .3s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 18px 34px -16px var(--accent);filter:brightness(1.05)}
+.btn.clair{background:transparent;color:#2A1E14;border:1.5px solid color-mix(in srgb,#2A1E14 35%,transparent)}
+.btn.clair:hover{background:color-mix(in srgb,#2A1E14 10%,transparent);box-shadow:none}
+.bandeau{display:flex;flex-wrap:wrap;gap:8px 28px;font:600 13px/1 var(--texte);letter-spacing:.08em;text-transform:uppercase;color:#6B5747}
+.bandeau span{display:inline-flex;align-items:center;gap:8px}
+.bandeau span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+/* ============ Sections ============ */
+section{padding-block:var(--bloc)}
+.entete{display:grid;gap:14px;margin-bottom:clamp(32px,4vw,56px);max-width:44ch}
+.cartes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,290px),1fr));gap:clamp(14px,1.6vw,22px)}
+@media(min-width:1080px){.cartes{grid-template-columns:repeat(3,1fr)}}
+.carte{position:relative;padding:clamp(24px,2.4vw,32px);border-radius:var(--rayon);background:var(--fond-2);border:1px solid var(--trait);
+  display:grid;gap:10px;align-content:start;transition:transform .4s cubic-bezier(.22,1,.36,1),border-color .4s,box-shadow .4s}
+.carte:hover{transform:translateY(-6px);border-color:color-mix(in srgb,var(--accent) 50%,var(--trait));box-shadow:var(--ombre)}
+.carte .prix{font-family:var(--titre);font-weight:var(--t-titre);font-size:clamp(22px,2vw,28px);color:var(--accent)}
+.carte p{font-size:15.5px;line-height:1.55}
+.galerie{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(10px,1.2vw,16px)}
+.galerie figure{position:relative;overflow:hidden;border-radius:var(--rayon);background:var(--fond-2);aspect-ratio:4/5}
+.galerie figure:first-child{grid-column:span 2;aspect-ratio:8/5}
+.galerie img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.22,1,.36,1)}
+.galerie figure:hover img{transform:scale(1.05)}
+@media(max-width:640px){.galerie figure:first-child{grid-column:auto;aspect-ratio:4/5}}
+.duo{display:grid;grid-template-columns:1fr;gap:clamp(28px,4vw,64px);align-items:center}
+@media(min-width:900px){.duo{grid-template-columns:1.05fr .95fr}.duo.inverse>*:first-child{order:2}}
+.duo figure{border-radius:var(--rayon);overflow:hidden;aspect-ratio:4/3;background:var(--fond-2)}
+.duo figure img{width:100%;height:100%;object-fit:cover}
+.chiffres{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:clamp(16px,2vw,28px);margin-top:28px}
+.chiffres b{display:block;font-family:var(--titre);font-weight:var(--t-titre);font-size:clamp(38px,4.4vw,60px);line-height:1;color:var(--accent)}
+.chiffres small{display:block;margin-top:8px;font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--encre-douce)}
+.citation{margin-top:clamp(28px,4vw,48px);padding-left:clamp(16px,2vw,24px);border-left:3px solid var(--accent);font-family:var(--titre);
+  font-weight:var(--t-titre);font-size:clamp(20px,2.2vw,30px);line-height:1.25;max-width:26ch}
+.horaires{width:100%;border-collapse:collapse}
+.horaires td{padding:15px 0;border-bottom:1px solid var(--trait);font-size:15px}
+.horaires td:last-child{text-align:right;font-weight:700;white-space:nowrap}
+.horaires tr.ferme td{color:var(--encre-douce)}
+.coord{display:grid;gap:8px;font-size:17px;line-height:1.5}
+.coord a.lienfort{display:inline-flex;align-items:center;min-height:44px;gap:8px;color:var(--accent);font-weight:700;border-bottom:2px solid color-mix(in srgb,var(--accent) 35%,transparent);width:fit-content}
+footer{background:var(--encre);color:var(--fond);padding:clamp(48px,6vw,76px) var(--marge) calc(clamp(32px,4vw,48px) + env(safe-area-inset-bottom));text-align:center;display:grid;justify-items:center;gap:16px}
+footer .marque b,footer .marque span{color:var(--fond)}
+footer .liens{display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+footer .liens a{min-height:48px;display:inline-flex;align-items:center;padding:0 22px;border-radius:var(--rayon);border:1px solid color-mix(in srgb,var(--fond) 30%,transparent);font-weight:600;font-size:15px;transition:background .3s,color .3s}
+footer .liens a:hover{background:var(--fond);color:var(--encre)}
+footer .liens a.plein{background:var(--accent);color:var(--accent-encre);border-color:var(--accent)}
+footer p{color:inherit}
+footer .mention{font-size:12px;opacity:.62;max-width:60ch}
+/* ============ Barre d'appel sur téléphone ============ */
+.appel-mobile{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+  background:color-mix(in srgb,var(--fond) 92%,transparent);backdrop-filter:blur(12px);border-top:1px solid var(--trait);
+  transform:translateY(120%);transition:transform .45s cubic-bezier(.22,1,.36,1)}
+.appel-mobile.vu{transform:none}
+.appel-mobile a{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;border-radius:var(--rayon);font-weight:700;font-size:15px}
+.appel-mobile a.plein{background:var(--accent);color:var(--accent-encre)}
+.appel-mobile a.vide{border:1.5px solid var(--trait)}
+@media(min-width:900px){.appel-mobile{display:none}}
+body{padding-bottom:0}
+@media(max-width:899px){body{padding-bottom:78px}}
+</style>
+</head>
+<body>
+<header id="tete">
+  <a class="marque" href="#haut"><span class="bloc-nom"><b>Bistrot du Port</b><span>Le Port-Marly</span></span></a>
+  <div class="tete-droite">
+    <a class="tel-tete" href="tel:+33139584459">01 39 58 44 59</a>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
 
-<header><a class="logo" href="#haut">Bistrot du Port<small>Restaurant — Le Port-Marly</small></a>
-<nav><a href="#cuisine">Cuisine</a><a href="#maison">La maison</a><a href="#infos">Infos</a></nav></header>
+<nav class="menu" id="menu" aria-label="Menu principal">
+  <a class="lien" href="#carte" style="--i:0">Sur la carte</a><a class="lien" href="#maison" style="--i:1">La maison</a><a class="lien" href="#infos" style="--i:2">Infos pratiques</a><a class="lien" href="tel:+33139584459" style="--i:3">Appeler</a>
+  <div class="bas">
+    <a href="tel:+33139584459">01 39 58 44 59</a>
+    <a href="https://www.openstreetmap.org/?mlat=48.8800978&mlon=2.1100648#map=18/48.8800978/2.1100648" target="_blank" rel="noopener">10 rue Jean Jaurès, Le Port-Marly</a>
+    <a href="https://www.instagram.com/le_bistrot_du_port_17/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.facebook.com/155029597905749" target="_blank" rel="noopener">Facebook</a>
+  </div>
+</nav>
 
-<section class="hero w" id="haut">
-<div><p class="num r">Restaurant · Le Port-Marly · bord de Seine</p>
-<h1 class="r">Fruits de mer et <em>Italie</em>, les pieds dans l’eau.</h1>
-<p class="r">Une cuisine qui mêle produits de la mer et spécialités italiennes, dans un décor de bistrot chaleureux au bord de Seine, au Port-Marly.</p>
-<div class="actions r"><a class="btn" href="tel:+33139584459">Appeler · 01 39 58 44 59</a><a class="btn l" href="#infos">Adresse et horaires</a></div>
-</div>
-<div class="r r2"><div class="img" aria-label="Emplacement photo">[photo à fournir]</div></div>
+<main id="haut">
+
+<section class="heros">
+  <div class="w">
+    <div class="duo" style="align-items:end;gap:clamp(28px,4vw,56px)">
+      <div style="display:grid;gap:clamp(18px,2.4vw,28px)">
+        <p class="sur rev">Restaurant · Le Port-Marly</p>
+        <h1 class="rev" style="--i:1">Le Bistrot<br>du <em>Port</em>.</h1>
+        <p class="intro rev" style="--i:2">Au bord de Seine, une cuisine qui mêle fruits de mer et spécialités italiennes, dans un décor de bistrot chaleureux.</p>
+        <div class="actions rev" style="--i:3">
+          <a class="btn" href="tel:+33139584459">Appeler le restaurant</a>
+          <a class="btn clair" href="https://www.openstreetmap.org/?mlat=48.8800978&mlon=2.1100648#map=18/48.8800978/2.1100648" target="_blank" rel="noopener">Venir au Port-Marly</a>
+        </div>
+        <div class="bandeau rev" style="--i:4"><span>Bord de Seine</span><span>Fruits de mer &amp; cuisine italienne</span><span>Le Port-Marly</span></div>
+      </div>
+      <figure class="rev" style="--i:2;border-radius:var(--rayon);overflow:hidden;aspect-ratio:3/4;max-height:72svh">
+        <img src="img/photo-1.jpg" alt="La terrasse du Bistrot du Port, en salle, avec la façade de la rue en arrière-plan" fetchpriority="high" decoding="async" style="width:100%;height:100%;object-fit:cover;filter:saturate(1.05)">
+      </figure>
+    </div>
+  </div>
 </section>
 
-<section class="w" id="cuisine">
-<h2>Sur la carte<span>ce qui fait la maison</span></h2>
-<div class="carte">
-<div><h3>Fruits de mer</h3><p>Les produits de la mer au cœur de la carte, entre plateaux et préparations du jour.</p></div>
-<div><h3>Spécialités italiennes</h3><p>Pâtes et recettes transalpines, en écho aux origines de la maison.</p></div>
-<div><h3>Décor bistrot</h3><p>Une salle chaleureuse au bord de Seine, pour un déjeuner comme pour un dîner.</p></div>
-</div>
-<p class="note">Carte, suggestions du jour et prix : <span class="compl">[à compléter avec le commerçant]</span>.</p>
+<section id="carte">
+  <div class="w">
+    <div class="entete">
+      <p class="sur rev">Sur la carte</p>
+      <h2 class="rev" style="--i:1">Mer et Italie,<br>servies à table.</h2>
+    </div>
+    <div class="cartes">
+      <article class="carte rev"><h3>Produits de la mer</h3><p>Poissons et fruits de mer occupent une partie de la carte, comme ce filet accompagné de riz et de poivrons confits.</p></article>
+      <article class="carte rev" style="--i:1"><h3>Racines italiennes</h3><p>Ces plats de la mer sont servis aux côtés de spécialités italiennes, dans l’esprit d’un bistrot de bord de Seine.</p></article>
+      <article class="carte rev" style="--i:2"><h3>Un décor de bistrot</h3><p>Nappes à carreaux, murs en pierre et une vitrine de flotteurs de pêche composent une salle chaleureuse, entre auberge de quartier et clin d’œil au port.</p></article>
+    </div>
+    <p class="rev" style="margin-top:22px;font-size:15px">La carte du jour et les prix sont communiqués sur place ou par téléphone.</p>
+  </div>
 </section>
 
-<section class="w" id="maison">
-<div class="manifeste">
-<p class="num" style="margin:0">La maison</p>
-<p>Le Bistrot du Port donne sur la Seine, rue Jean Jaurès, au Port-Marly. <em>[à compléter avec le commerçant : depuis quand, l’équipe, une phrase à vous]</em></p>
-</div>
+<section id="maison" style="background:var(--fond-2);border-block:1px solid var(--trait)">
+  <div class="w">
+    <div class="duo inverse">
+      <div>
+        <p class="sur rev">La maison</p>
+        <h2 class="rev" style="--i:1;margin-top:14px">Une cuisine ouverte<br>sur le port.</h2>
+        <p class="rev" style="--i:2;margin-top:18px">Le Bistrot du Port occupe une salle de quartier au 10 rue Jean Jaurès, au Port-Marly. En cuisine, on y travaille les produits de la mer aux côtés de recettes italiennes, dans une ambiance familiale et sans façon.</p>
+      </div>
+      <figure class="rev" style="--i:2;aspect-ratio:1/1">
+        <img src="img/photo-4.jpg" alt="Le chef du Bistrot du Port prépare un homard entier en cuisine" loading="lazy" decoding="async" style="filter:saturate(1.05)">
+      </figure>
+    </div>
+    <div class="galerie" style="margin-top:clamp(28px,4vw,48px)">
+      <figure class="rev" style="--i:1"><img src="img/photo-3.jpg" alt="Vitrine de flotteurs de pêche anciens qui décore la salle du restaurant" loading="lazy" decoding="async" style="filter:saturate(1.05)"></figure>
+      <figure class="rev" style="--i:2"><img src="img/photo-5.jpg" alt="La salle en pierre du Bistrot du Port, nappes à carreaux rouges et blancs" loading="lazy" decoding="async" style="filter:saturate(1.05)"></figure>
+    </div>
+  </div>
 </section>
 
-<section class="w" id="infos">
-<div class="infos">
-<div><h2>Nous trouver</h2>
-<p class="adresse">10 Rue Jean Jaurès<br>78560 Le Port-Marly<br>
-<a href="https://www.openstreetmap.org/?mlat=48.8800978&mlon=2.1100648#map=18/48.8800978/2.1100648" target="_blank" rel="noopener">Itinéraire →</a></p></div>
-<table><tr><td>Horaires</td><td class="compl">[à compléter avec le commerçant]</td></tr></table>
-</div>
+<section id="infos">
+  <div class="w">
+    <div class="duo">
+      <div>
+        <p class="sur rev">Infos pratiques</p>
+        <h2 class="rev" style="--i:1;margin-top:14px">Nous trouver.</h2>
+        <div class="coord rev" style="--i:2;margin-top:22px">
+          <span>10 rue Jean Jaurès<br>78560 Le Port-Marly</span>
+          <a class="lienfort" href="https://www.openstreetmap.org/?mlat=48.8800978&mlon=2.1100648#map=18/48.8800978/2.1100648" target="_blank" rel="noopener">Ouvrir l’itinéraire</a>
+          <a class="lienfort" href="tel:+33139584459">01 39 58 44 59</a>
+        </div>
+      </div>
+      <div class="rev" style="--i:2;padding:clamp(24px,2.4vw,32px);border-radius:var(--rayon);background:var(--fond-2);border:1px solid var(--trait)">
+        <h3 style="margin-bottom:10px">Horaires</h3>
+        <p style="font-size:15.5px">Les horaires d’ouverture ne sont pas publiés à ce jour : le plus sûr est d’appeler avant de venir, notamment pour la terrasse en saison.</p>
+      </div>
+    </div>
+  </div>
 </section>
+
+</main>
 
 <footer>
-<b>Bistrot du Port</b>
-<p>10 Rue Jean Jaurès, 78560 Le Port-Marly</p>
-<div class="contact">
-<a class="tel" href="tel:+33139584459">01 39 58 44 59</a>
-<a href="mailto:lebistrotduport.naob@gmail.com">Écrire</a>
-<a href="https://www.instagram.com/le_bistrot_du_port_17/" target="_blank" rel="noopener">Instagram</a>
-<a href="https://www.facebook.com/155029597905749" target="_blank" rel="noopener">Facebook</a>
-</div>
-<small>Page réalisée à partir d’informations publiques ; photos, carte et horaires à finaliser avec le commerçant.</small>
+  <span class="marque"><span class="bloc-nom"><b>Bistrot du Port</b><span>Le Port-Marly</span></span></span>
+  <p style="color:inherit;opacity:.8">10 rue Jean Jaurès, 78560 Le Port-Marly</p>
+  <div class="liens"><a class="plein" href="tel:+33139584459">01 39 58 44 59</a><a href="https://www.openstreetmap.org/?mlat=48.8800978&mlon=2.1100648#map=18/48.8800978/2.1100648" target="_blank" rel="noopener">Itinéraire</a><a href="https://www.instagram.com/le_bistrot_du_port_17/" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/155029597905749" target="_blank" rel="noopener">Facebook</a></div>
+  <p class="mention">Page réalisée à partir d’informations publiques. Photographies : page Instagram du Bistrot du Port, à remplacer par ses propres fichiers si le restaurant le souhaite.</p>
 </footer>
 
-</body></html>
+<div class="appel-mobile" id="appel"><a class="plein" href="tel:+33139584459">Appeler</a><a class="vide" href="https://www.openstreetmap.org/?mlat=48.8800978&mlon=2.1100648#map=18/48.8800978/2.1100648" target="_blank" rel="noopener">Y aller</a></div>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Restaurant", "name": "Bistrot du Port", "image": "https://slayder1234567.github.io/sites-vitrines/bistrot-du-port-le-port-marly/img/photo-1.jpg", "url": "https://slayder1234567.github.io/sites-vitrines/bistrot-du-port-le-port-marly/", "telephone": "+33139584459", "email": "lebistrotduport.naob@gmail.com", "address": {"@type": "PostalAddress", "streetAddress": "10 Rue Jean Jaurès", "postalCode": "78560", "addressLocality": "Le Port-Marly", "addressCountry": "FR"}, "geo": {"@type": "GeoCoordinates", "latitude": 48.8800978, "longitude": 2.1100648}, "servesCuisine": ["Fruits de mer", "Cuisine italienne"], "sameAs": ["https://www.instagram.com/le_bistrot_du_port_17/", "https://www.facebook.com/155029597905749"]}</script>
+<script>
+(() => {
+  const b = document.getElementById('burger'), corps = document.body, tete = document.getElementById('tete');
+  const bascule = (o) => { corps.classList.toggle('ouvert', o); b.setAttribute('aria-expanded', o); b.setAttribute('aria-label', o ? 'Fermer le menu' : 'Ouvrir le menu'); corps.style.overflow = o ? 'hidden' : ''; };
+  b.addEventListener('click', () => bascule(!corps.classList.contains('ouvert')));
+  document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => bascule(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape') bascule(false); });
+  const surVue = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vu'); surVue.unobserve(e.target); } }), {threshold: .12, rootMargin: '0px 0px -8% 0px'});
+  document.querySelectorAll('.rev').forEach(e => surVue.observe(e));
+  const appel = document.getElementById('appel');
+  addEventListener('scroll', () => { const y = scrollY; tete.classList.toggle('file', y > 24); appel.classList.toggle('vu', y > 420); }, {passive: true});
+})();
+</script>
+</body>
+</html>
