@@ -1,0 +1,95 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Délice d'Asie — restaurant chinois, Versailles</title>
+<meta name="description" content="Délice d'Asie, 5 rue de Montreuil à Versailles : cuisine chinoise fraîche et de qualité, livraison en 32 minutes environ. Ouvert de 11h à 21h.">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300&family=Public+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--papier:#F5F0E6;--encre:#241B16;--gris:#6E655B;--rouge:#A8331F;--ligne:#DCD3C2}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--papier);color:var(--encre);font:300 16px/1.6 "Public Sans",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}.w{max-width:1100px;margin:0 auto;padding-left:24px;padding-right:24px}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 24px;border-bottom:1px solid var(--ligne)}
+.logo{font:600 21px "Fraunces",serif;letter-spacing:-.01em}
+nav{display:flex;gap:22px;font-size:15px;letter-spacing:.12em;text-transform:uppercase}
+nav a{position:relative;min-height:44px;display:inline-flex;align-items:center}
+nav a::after{content:"";position:absolute;left:0;bottom:10px;width:0;height:1px;background:var(--rouge);transition:width .4s}nav a:hover::after{width:100%}
+.hero{display:grid;grid-template-columns:7fr 5fr;gap:36px;padding-top:52px;padding-bottom:48px;align-items:end}
+.num{font:300 15px "Public Sans";letter-spacing:.18em;text-transform:uppercase;color:var(--gris);margin-bottom:20px}
+.hero h1{font:300 clamp(38px,6.5vw,74px)/1.05 "Fraunces",serif;letter-spacing:-.03em}
+.hero h1 em{font-style:italic;color:var(--rouge)}
+.hero p{max-width:400px;color:var(--gris);font-size:16px;margin-top:16px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;min-height:48px;background:var(--encre);color:var(--papier);padding:0 22px;border-radius:2px;font-size:15px;letter-spacing:.03em;font-weight:500}
+.btn.l{background:transparent;color:var(--encre);border:1px solid var(--encre)}
+.img{background:var(--rouge);aspect-ratio:4/5;position:relative;overflow:hidden;display:grid;place-items:center;color:#F5E6DE;font:italic 300 13px "Public Sans"}
+section{padding-top:48px;padding-bottom:48px;border-top:1px solid var(--ligne)}
+h2{font:300 34px "Fraunces",serif;letter-spacing:-.02em;margin-bottom:6px}
+h2 span{display:block;font:italic 300 15px "Public Sans";color:var(--rouge);margin-top:4px}
+.offre{display:grid;grid-template-columns:repeat(3,1fr);gap:26px 28px;margin-top:30px}
+.item h3{font:600 18px "Fraunces",serif;margin-bottom:6px}
+.item p{font-size:15px;color:var(--gris)}
+.item p em{font-style:italic;color:var(--rouge)}
+.preuve{display:grid;grid-template-columns:.8fr 1.2fr;gap:36px;align-items:center}
+.chiffre{font:300 88px "Fraunces",serif;line-height:.9;color:var(--rouge)}
+.chiffre span{display:block;font:400 15px "Public Sans";letter-spacing:.1em;text-transform:uppercase;color:var(--gris);margin-top:10px}
+.citation{font:italic 300 22px/1.4 "Fraunces",serif}
+.citation footer{border:0;padding:10px 0 0;font:400 15px "Public Sans";letter-spacing:.05em;text-transform:uppercase;color:var(--gris)}
+.infos{display:grid;grid-template-columns:.85fr 1.15fr;gap:36px;align-items:start}
+.adresse{font-size:16px;line-height:1.6}
+.adresse a{color:var(--rouge);font-weight:500;border-bottom:1px solid var(--rouge);display:inline-block;margin-top:10px;min-height:44px;line-height:44px}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+td{padding:12px 0;border-bottom:1px dashed var(--ligne);vertical-align:top}
+td:last-child{text-align:right;font-weight:500}
+.attente{font-size:15px;color:var(--gris);margin-top:14px}
+footer.pied{background:var(--encre);color:var(--papier);padding:36px 24px;text-align:center}
+footer.pied b{font:400 22px "Fraunces",serif;display:block;margin-bottom:6px}
+footer.pied p{font-size:15px;opacity:.85}
+.contact{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin:18px 0 12px}
+.contact a{display:inline-flex;align-items:center;min-height:48px;padding:0 20px;border-radius:2px;border:1px solid rgba(245,240,230,.5);font-weight:500;font-size:15px}
+.contact a.tel{background:var(--papier);color:var(--encre);border-color:var(--papier)}
+footer.pied small{display:block;font-size:15px;opacity:.6;margin-top:14px}
+.r{opacity:0;transform:translateY(18px);animation:r .8s cubic-bezier(.16,1,.3,1) forwards}
+.r2{animation-delay:.12s}
+@keyframes r{to{opacity:1;transform:none}}
+@media(max-width:820px){
+.hero{grid-template-columns:1fr;gap:26px;padding:36px 0}
+.img{max-width:280px;margin:0 auto;aspect-ratio:1/1}
+.offre{grid-template-columns:1fr 1fr;gap:22px}
+.preuve,.infos{grid-template-columns:1fr}
+.chiffre{font-size:64px}
+nav{gap:14px}
+}
+@media(max-width:480px){.offre{grid-template-columns:1fr}}
+</style></head><body>
+
+<header><a class="logo" href="#haut">Délice d'Asie</a><nav><a href="#offre">La cuisine</a><a href="#infos">Horaires</a><a href="#contact">Contact</a></nav></header>
+
+<section class="hero w" id="haut">
+<div class="r"><p class="num">Restaurant chinois · Versailles</p><h1>Cuisine chinoise <em>fraîche</em>, livrée vite.</h1><p>5 rue de Montreuil à Versailles : une cuisine chinoise fraîche et de qualité, livrée en 32 minutes environ.</p>
+<div class="actions"><a class="btn" href="tel:+33130210232">Appeler · 01 30 21 02 32</a><a class="btn l" href="#infos">Horaires et adresse</a></div></div>
+<div class="r r2"><div class="img" aria-label="Emplacement photo">[photo à fournir]</div></div>
+</section>
+
+<section class="w" id="offre"><h2>Ce qu'on propose<span>l'essentiel, en attendant le détail avec le commerçant</span></h2>
+<div class="offre">
+<div class="item"><h3>Cuisine chinoise</h3><p>Une cuisine chinoise fraîche et de qualité, préparée sur place.</p></div>
+<div class="item"><h3>Livraison à domicile</h3><p>Livraison en <em>32 minutes environ</em> autour de Versailles.</p></div>
+<div class="item"><h3>Carte détaillée</h3><p>[à compléter avec le commerçant]</p></div>
+<div class="item"><h3>Vente à emporter</h3><p>[à compléter avec le commerçant]</p></div>
+<div class="item"><h3>Sur place</h3><p>[à compléter avec le commerçant]</p></div>
+<div class="item"><h3>Options végétariennes</h3><p>[à compléter avec le commerçant]</p></div>
+</div></section>
+
+<section class="w preuve"><div><div class="chiffre">32<span>minutes de livraison environ</span></div></div>
+<div><p class="citation">« Cuisine chinoise fraîche et de qualité. »</p><footer>— accroche du commerce, à confirmer avec un avis client · [à compléter avec le commerçant]</footer></div>
+</section>
+
+<section class="w infos" id="infos"><div><h2>Adresse et horaires</h2><p class="adresse">5 Rue de Montreuil<br>78000 Versailles<br><a href="https://www.openstreetmap.org/?mlat=48.8054295&mlon=2.1423629#map=18/48.8054295/2.1423629" target="_blank" rel="noopener">Itinéraire →</a></p></div>
+<div><table><tr><td>Tous les jours</td><td>11h00 — 21h00</td></tr></table><p class="attente">Jours de fermeture éventuels : [à compléter avec le commerçant]</p></div>
+</section>
+
+<footer class="pied" id="contact"><b>Délice d'Asie</b><p>5 Rue de Montreuil, 78000 Versailles</p>
+<div class="contact"><a class="tel" href="tel:+33130210232">01 30 21 02 32</a></div>
+<p style="font-size:13px;opacity:.75">Instagram : [à compléter avec le commerçant]</p>
+<small>Page réalisée à partir d'informations publiques vérifiées le 17 septembre 2026 ; photos et détails de carte à finaliser avec le commerçant.</small></footer>
+
+</body></html>
