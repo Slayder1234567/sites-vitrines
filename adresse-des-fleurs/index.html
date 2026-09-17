@@ -5,20 +5,20 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Adresse des Fleurs — fleuriste de quartier à Rueil-Malmaison</title>
 <meta name="description" content="Adresse des Fleurs, fleuriste à Rueil-Malmaison (92500) : bouquets et compositions de saison, en boutique jusqu’à 20 h.">
-<meta name="theme-color" content="#F7F4F2">
+<meta name="theme-color" content="#EDEDEA">
 <meta property="og:title" content="Adresse des Fleurs — fleuriste de quartier à Rueil-Malmaison">
 <meta property="og:description" content="Adresse des Fleurs, fleuriste à Rueil-Malmaison (92500) : bouquets et compositions de saison, en boutique jusqu’à 20 h.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 /* ============ Jetons — une direction artistique = ce bloc, rien d'autre ============ */
 :root{
-  --fond:#F7F4F2; --fond-2:#FFFFFF; --encre:#231D1C; --encre-douce:#6A5E5C;
-  --accent:#B5736B; --accent-encre:#FFFFFF; --trait:#E6DEDA;
-  --titre:'Marcellus',Georgia,serif; --texte:'Karla',system-ui,sans-serif;
-  --t-titre:400; --casse-titre:none; --interlettre:-.01em;
-  --rayon:14px; --ombre:0 24px 60px -24px color-mix(in srgb, var(--encre) 40%, transparent);
+  --fond:#EDEDEA; --fond-2:#F7F7F5; --encre:#111112; --encre-douce:#55565A;
+  --accent:#1F35E8; --accent-encre:#FFFFFF; --trait:#D8D8D4;
+  --titre:'Archivo Black',Helvetica,sans-serif; --texte:'Archivo',system-ui,sans-serif;
+  --t-titre:400; --casse-titre:uppercase; --interlettre:-.02em;
+  --rayon:2px; --ombre:0 24px 60px -24px color-mix(in srgb, var(--encre) 40%, transparent);
   --marge:clamp(20px,5vw,64px); --bloc:clamp(64px,9vw,128px);
 }
 /* ============ Base ============ */
@@ -83,19 +83,19 @@ body.ouvert .menu .bas{opacity:.85}
 /* ============ Héros ============ */
 .heros{position:relative;min-height:clamp(520px,80svh,820px);display:grid;align-items:center;padding:clamp(104px,12vh,150px) 0 clamp(48px,7vw,88px);overflow:hidden}
 .heros .fond{position:absolute;inset:0;z-index:-2}
-.heros .fond img{width:100%;height:100%;object-fit:cover;filter:saturate(.95) brightness(1.02)}
-.heros .voile{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(35,29,28,.1) 0%,rgba(35,29,28,.4) 55%,rgba(35,29,28,.8) 100%)}
+.heros .fond img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.heros .voile{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(237,237,234,0) 30%,rgba(237,237,234,.9) 100%)}
 .heros .w{display:grid;gap:clamp(18px,2.4vw,30px)}
-.heros h1{color:#FFFFFF;max-width:15ch}
+.heros h1{color:#111112;max-width:15ch}
 .heros h1 em{font-style:normal;color:var(--accent)}
-.heros .intro{font-size:clamp(17px,1.5vw,21px);color:#EFE6E3;max-width:52ch}
+.heros .intro{font-size:clamp(17px,1.5vw,21px);color:#3A3B3E;max-width:52ch}
 .actions{display:flex;flex-wrap:wrap;gap:12px}
 .btn{display:inline-flex;align-items:center;gap:10px;min-height:54px;padding:0 28px;border-radius:var(--rayon);background:var(--accent);color:var(--accent-encre);
   font-weight:700;font-size:15px;letter-spacing:.01em;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s,filter .3s}
 .btn:hover{transform:translateY(-3px);box-shadow:0 18px 34px -16px var(--accent);filter:brightness(1.05)}
-.btn.clair{background:transparent;color:#FFFFFF;border:1.5px solid color-mix(in srgb,#FFFFFF 45%,transparent)}
-.btn.clair:hover{background:color-mix(in srgb,#FFFFFF 12%,transparent);box-shadow:none}
-.bandeau{display:flex;flex-wrap:wrap;gap:8px 28px;font:600 13px/1 var(--texte);letter-spacing:.08em;text-transform:uppercase;color:#EFE6E3}
+.btn.clair{background:transparent;color:#111112;border:1.5px solid color-mix(in srgb,#111112 45%,transparent)}
+.btn.clair:hover{background:color-mix(in srgb,#111112 12%,transparent);box-shadow:none}
+.bandeau{display:flex;flex-wrap:wrap;gap:8px 28px;font:600 13px/1 var(--texte);letter-spacing:.08em;text-transform:uppercase;color:#3A3B3E}
 .bandeau span{display:inline-flex;align-items:center;gap:8px}
 .bandeau span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
 /* ============ Sections ============ */
@@ -238,7 +238,7 @@ body{padding-bottom:0}
 
 <div class="appel-mobile" id="appel"><a class="plein" href="tel:+33147513243">Appeler</a><a class="vide" href="https ://www.openstreetmap.org/ ?mlat=48.8681673&amp;mlon=2.1936245#map=18/48.8681673/2.1936245" target="_blank" rel="noopener">Y aller</a></div>
 
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Florist", "name": "Adresse des Fleurs", "address": {"@type": "PostalAddress", "streetAddress": "65 Avenue du 18 Juin 1940", "postalCode": "92500", "addressLocality": "Rueil-Malmaison", "addressCountry": "FR"}, "telephone": "+33147513243", "geo": {"@type": "GeoCoordinates", "latitude": 48.8681673, "longitude": 2.1936245}, "image": "img/photo-3.jpg", "email": "adressedesfleurs@gmail.com"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Florist", "name": "Adresse des Fleurs", "address": {"@type": "PostalAddress", "streetAddress": "65 Avenue du 18 Juin 1940", "postalCode": "92500", "addressLocality": "Rueil-Malmaison", "addressCountry": "FR"}, "telephone": "+33147513243", "url": "https://slayder1234567.github.io/sites-vitrines/adresse-des-fleurs/", "geo": {"@type": "GeoCoordinates", "latitude": 48.8681673, "longitude": 2.1936245}, "image": "https://slayder1234567.github.io/sites-vitrines/adresse-des-fleurs/img/photo-3.jpg", "email": "adressedesfleurs@gmail.com"}</script>
 <script>
 (() => {
   const b = document.getElementById('burger'), corps = document.body, tete = document.getElementById('tete');
