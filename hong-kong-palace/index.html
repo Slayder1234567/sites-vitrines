@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hong Kong Palace — Rueil-Malmaison</title>
+<meta name="description" content="Hong Kong Palace, restaurant chinois et thaïlandais à Rueil-Malmaison : cuisine authentique, service midi et soir, tous les jours de la semaine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Work+Sans:wght@300;400;500;600&display=swap">
+<style>
+:root{
+  --lait:#FAF7F1; --lait-2:#F1EADF; --encre:#231C1A; --encre-2:#6B5D57;
+  --prune:#9B2A47; --prune-clair:#C0405F; --ble:#D9A441; --vert:#3F6B4A;
+  --r-xl:36px; --r-lg:28px; --r-md:20px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--encre);font-family:"Work Sans",system-ui,sans-serif;font-size:16px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  background:
+    radial-gradient(60rem 42rem at 88% -4%, rgba(217,164,65,.42), transparent 62%),
+    radial-gradient(54rem 40rem at 2% 26%, rgba(155,42,71,.22), transparent 60%),
+    radial-gradient(48rem 36rem at 74% 66%, rgba(63,107,74,.2), transparent 62%),
+    radial-gradient(44rem 34rem at 20% 92%, rgba(217,164,65,.26), transparent 62%),
+    var(--lait);
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:"Fraunces",Georgia,serif;font-weight:600;letter-spacing:-.02em;text-wrap:balance}
+.wrap{width:min(1180px,100% - 36px);margin-inline:auto}
+
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:200;opacity:.42;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.045'/%3E%3C/svg%3E");
+}
+
+/* ——— verre clair ——— */
+.verre{
+  position:relative;
+  background:linear-gradient(140deg,rgba(255,255,255,.72),rgba(255,255,255,.42) 48%,rgba(255,255,255,.6));
+  -webkit-backdrop-filter:blur(20px) saturate(165%);backdrop-filter:blur(20px) saturate(165%);
+  border:1px solid rgba(255,255,255,.8);
+  box-shadow:0 20px 48px -22px rgba(63,42,28,.35),
+             inset 0 1px 0 rgba(255,255,255,.95),
+             inset 0 -1px 0 rgba(255,255,255,.4);
+  border-radius:var(--r-lg);
+}
+.verre::before{
+  content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(118deg,rgba(255,255,255,.6) 0%,rgba(255,255,255,0) 26%,rgba(255,255,255,0) 74%,rgba(255,255,255,.3) 100%);
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .verre{background:rgba(255,255,255,.93)}
+}
+
+/* ——— barre ——— */
+.barre{
+  position:fixed;z-index:120;left:50%;transform:translateX(-50%);
+  top:calc(16px + env(safe-area-inset-top,0px));
+  width:min(700px,calc(100% - 28px));
+  border-radius:999px;padding:8px 8px 8px 22px;
+  display:flex;align-items:center;gap:14px;
+  transition:width .45s var(--ease),padding .45s var(--ease);
+}
+.barre.compacte{width:min(600px,calc(100% - 28px))}
+.marque{font-family:"Fraunces",serif;font-size:17px;font-weight:600;letter-spacing:-.02em;white-space:nowrap}
+.marque{margin-inline-end:auto}
+.liens{display:none;gap:28px;margin-inline:auto;font-size:14px;font-weight:500}
+.liens a{text-decoration:none;color:var(--encre-2);transition:color .25s}
+.liens a:hover{color:var(--prune)}
+.tel-pill{
+  text-decoration:none;font-weight:600;font-size:13.5px;white-space:nowrap;
+  background:var(--encre);color:var(--lait);padding:11px 18px;border-radius:999px;
+  transition:transform .16s cubic-bezier(.3,.9,.3,1),background .28s
+}
+.tel-pill:hover{transform:translateY(-2px);background:var(--prune)}
+.burger{
+  width:44px;height:44px;flex:0 0 44px;cursor:pointer;border-radius:50%;
+  background:rgba(35,28,26,.07);border:1px solid rgba(35,28,26,.12);
+  display:grid;place-content:center;gap:4.5px;transition:background .25s
+}
+.burger:hover{background:rgba(35,28,26,.13)}
+.burger span{display:block;width:17px;height:1.7px;background:var(--encre);border-radius:2px;
+  transition:transform .45s var(--ease),opacity .25s}
+body.menu-ouvert .burger span:nth-child(1){transform:translateY(6.2px) rotate(45deg)}
+body.menu-ouvert .burger span:nth-child(2){opacity:0}
+body.menu-ouvert .burger span:nth-child(3){transform:translateY(-6.2px) rotate(-45deg)}
+@media (max-width:880px){.liens{display:none}}
+
+.menu{
+  position:fixed;inset:0;z-index:110;display:grid;place-content:center;
+  -webkit-backdrop-filter:blur(28px) saturate(150%);backdrop-filter:blur(28px) saturate(150%);
+  background:rgba(250,247,241,.8);
+  clip-path:circle(0% at calc(100% - 44px) 44px);transition:clip-path .78s var(--ease);
+}
+body.menu-ouvert .menu{clip-path:circle(150% at calc(100% - 44px) 44px)}
+.menu nav{display:flex;flex-direction:column;gap:4px;text-align:center}
+.menu a{font-family:"Fraunces",serif;font-weight:600;font-size:clamp(34px,7vw,62px);text-decoration:none;
+  opacity:0;transform:translateY(20px);transition:opacity .5s var(--ease),transform .5s var(--ease),color .3s}
+.menu a:hover{color:var(--prune)}
+body.menu-ouvert .menu a{opacity:1;transform:none}
+body.menu-ouvert .menu a:nth-child(1){transition-delay:.16s}
+body.menu-ouvert .menu a:nth-child(2){transition-delay:.23s}
+body.menu-ouvert .menu a:nth-child(3){transition-delay:.30s}
+body.menu-ouvert .menu a:nth-child(4){transition-delay:.37s}
+.menu .pied{margin-top:34px;text-align:center;font-size:14px;color:var(--encre-2);opacity:0;transition:opacity .5s .44s}
+body.menu-ouvert .menu .pied{opacity:1}
+body.menu-ouvert{overflow:hidden}
+
+/* ——— héros asymétrique ——— */
+.heros{padding-top:calc(128px + env(safe-area-inset-top,0px));padding-bottom:clamp(40px,7vw,90px)}
+.heros .grille{display:grid;grid-template-columns:1fr 1.02fr;gap:clamp(22px,4vw,56px);align-items:center}
+.etiquette{display:inline-flex;align-items:center;gap:9px;padding:8px 16px;border-radius:999px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--vert)}
+.point{width:7px;height:7px;border-radius:50%;background:var(--vert);box-shadow:0 0 0 0 rgba(63,107,74,.55);animation:pouls 2.4s infinite}
+@keyframes pouls{70%{box-shadow:0 0 0 9px rgba(63,107,74,0)}100%{box-shadow:0 0 0 0 rgba(63,107,74,0)}}
+.heros h1{font-size:clamp(42px,7.2vw,86px);line-height:.96;margin:20px 0 0;font-weight:600}
+.heros h1 em{font-style:italic;font-weight:400;color:var(--prune)}
+.sous{max-width:40ch;margin:18px 0 0;font-size:clamp(15px,1.6vw,18px);color:var(--encre-2)}
+.boutons{display:flex;flex-wrap:wrap;gap:11px;margin-top:28px}
+.btn{text-decoration:none;font-weight:600;font-size:15px;padding:15px 28px;border-radius:999px;transition:transform .16s cubic-bezier(.3,.9,.3,1),box-shadow .16s ease-out,background .3s}
+.btn-plein{background:var(--encre);color:var(--lait);box-shadow:0 14px 32px -14px rgba(35,28,26,.7)}
+.btn-plein:hover{transform:translateY(-3px);background:var(--prune)}
+.btn-verre{border:1px solid rgba(35,28,26,.16);background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.btn-verre:hover{transform:translateY(-3px);background:rgba(255,255,255,.85)}
+
+.visuel{position:relative}
+.visuel .cadre{border-radius:var(--r-xl);overflow:hidden;box-shadow:0 46px 90px -44px rgba(63,42,28,.6)}
+.visuel .cadre img{width:100%;aspect-ratio:1/1;object-fit:cover;transform:translateZ(0)}
+.bulle{
+  position:absolute;left:-14px;bottom:26px;padding:16px 20px;border-radius:var(--r-md);width:min(230px,62%);
+}
+.bulle .k{font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--encre-2)}
+.bulle strong{display:block;font-family:"Fraunces",serif;font-size:21px;font-weight:600;margin-top:3px}
+@media (max-width:880px){
+  .heros .grille{grid-template-columns:1fr}
+  .visuel{order:-1}
+  .bulle{left:auto;right:12px;bottom:-16px}
+}
+
+/* ——— sections ——— */
+section{padding-block:clamp(44px,5.6vw,84px)}
+.sur-titre{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--prune);margin-bottom:13px}
+.titre-sec{font-size:clamp(30px,4.6vw,56px);line-height:1.02}
+.intro{max-width:50ch;color:var(--encre-2);margin-top:16px}
+
+.rayon{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:14px;padding:38px 0 0}
+.carte{padding:24px 24px 26px;border-radius:var(--r-lg);transition:transform .45s var(--ease)}
+.carte:hover{transform:translateY(-8px)}
+.carte .ico{font-family:"Fraunces",serif;font-size:13px;color:var(--ble);letter-spacing:.12em}
+.carte h3{font-size:23px;margin:9px 0 8px;font-weight:600}
+.carte p{margin:0;font-size:14.5px;color:var(--encre-2)}
+
+.duo{display:grid;grid-template-columns:1.18fr .82fr;gap:clamp(20px,4vw,48px);align-items:center}
+.duo .photo{border-radius:var(--r-xl);overflow:hidden;box-shadow:0 36px 80px -40px rgba(63,42,28,.55)}
+.duo .photo img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:center 42%;transition:transform 1.1s var(--ease)}
+.duo .photo:hover img{transform:scale(1.05)}
+.chiffres{display:flex;gap:30px;flex-wrap:wrap;margin-top:28px}
+.chiffres div b{display:block;font-family:"Fraunces",serif;font-size:clamp(28px,3.6vw,42px);font-weight:600;line-height:1;color:var(--prune)}
+.chiffres div span{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--encre-2)}
+@media (max-width:880px){.duo{grid-template-columns:1fr}}
+
+.pratique{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
+.panneau{padding:clamp(22px,3vw,34px);border-radius:var(--r-lg)}
+.horaires{width:100%;border-collapse:collapse;font-size:15px}
+.horaires td{padding:11px 0;border-bottom:1px solid rgba(35,28,26,.1)}
+.horaires tr:last-child td{border-bottom:0}
+.horaires td:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--encre-2)}
+.horaires tr.actif td{font-weight:600;color:var(--encre)}
+.adresse{font-family:"Fraunces",serif;font-size:clamp(21px,2.5vw,29px);line-height:1.22;font-weight:600}
+.lien-souligne{display:inline-block;margin-top:13px;text-decoration:none;border-bottom:1.5px solid var(--prune);padding-bottom:3px;font-size:15px;font-weight:500;transition:color .3s}
+.lien-souligne:hover{color:var(--prune)}
+@media (max-width:760px){.pratique{grid-template-columns:1fr}}
+
+footer{padding-block:clamp(44px,7vw,80px) calc(96px + env(safe-area-inset-bottom,0px));border-top:1px solid rgba(35,28,26,.1);text-align:center}
+footer .nom{font-family:"Fraunces",serif;font-size:clamp(30px,5.5vw,60px);font-weight:600}
+footer .mentions{font-size:12.5px;color:rgba(35,28,26,.45);margin-top:24px;max-width:58ch;margin-inline:auto}
+
+.appel{
+  position:fixed;z-index:115;left:50%;transform:translate(-50%,130%);
+  bottom:calc(14px + env(safe-area-inset-bottom,0px));width:min(430px,calc(100% - 24px));
+  border-radius:999px;padding:8px 8px 8px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;
+  text-decoration:none;transition:transform .5s var(--ease);
+}
+.appel.visible{transform:translate(-50%,0)}
+.appel .txt{font-size:12.5px;line-height:1.3;color:var(--encre-2)}
+.appel .txt b{display:block;font-family:"Fraunces",serif;font-size:15px;font-weight:600;color:var(--encre)}
+@media (max-width:820px){.appel{display:flex}}
+
+/* Fluidite : le flou de fond coute cher a chaque image. On le garde sur la barre,
+   le menu et les panneaux uniques ; les blocs repetes prennent un fond translucide simple. */
+.carte,.panneau{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(255,255,255,.62)}
+.carte::before,.panneau::before{opacity:.5}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .monte{opacity:1;transform:none}
+}
+
+/* ═════ Barre : le bouton à trois barres reste seul, à toutes les tailles ═════ */
+@media (min-width:900px){
+  .barre{width:min(1000px,calc(100% - 28px))}
+  .barre.compacte{width:min(860px,calc(100% - 28px))}
+  .marque{margin-inline-end:auto}
+}
+@media (max-width:899px){
+  .marque{margin-inline-end:auto}
+  /* sur téléphone : le menu s'ouvre net, sans animation */
+  .menu{clip-path:none;opacity:0;visibility:hidden;transition:opacity .16s linear,visibility .16s}
+  body.menu-ouvert .menu{clip-path:none;opacity:1;visibility:visible}
+  .menu a,.menu .pied{opacity:1;transform:none;transition:none}
+  body.menu-ouvert .menu a{transition-delay:0s}
+}
+
+/* ═════ Les cartes réagissent au survol — ordinateur uniquement ═════ */
+@media (hover:hover) and (pointer:fine){
+  .carte{overflow:hidden;
+    transition:transform .16s cubic-bezier(.3,.9,.3,1),box-shadow .16s ease-out}
+  .carte::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    background:linear-gradient(112deg,transparent 34%,rgba(255,255,255,.22) 48%,transparent 62%);
+    transform:translateX(-130%);transition:transform .42s cubic-bezier(.3,.9,.3,1)}
+  .carte:hover::after{transform:translateX(130%)}
+  .carte:hover{transform:translateY(-8px)}
+}
+
+/* ═════ Motion : le JS pilote le mouvement, le CSS ne fait que l'état de repos ═════
+   Sans JS (CDN injoignable, script bloqué), rien n'est caché : la page reste lisible. */
+.js .monte{opacity:0}
+.js .carte, .panneau{transition-property:box-shadow,background,border-color;transition-duration:.16s}
+.js .carte, .panneau:hover{transform:none}
+@media (max-width:899px){ .js .monte{opacity:1} }
+
+/* Le numéro n'apparaît qu'une fois. Dès que la barre d'appel du bas existe
+   (820 px), celui de la barre du haut disparaît — et jamais l'inverse :
+   .appel .tel-pill doit rester visible, c'est le bouton « Appeler ». */
+@media (max-width:820px){
+  .barre .tel-pill{display:none}
+  .appel .tel-pill{display:inline-flex;align-items:center}
+}
+
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Hong Kong Palace", "address": {"@type": "PostalAddress", "streetAddress": "1 rue du Bel-Air", "postalCode": "92500", "addressLocality": "Rueil-Malmaison", "addressCountry": "FR"}, "telephone": "01 47 77 04 00", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "12:00", "closes": "14:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "opens": "19:00", "closes": "22:30"}], "image": "img/photo-2.webp"}</script>
+</head>
+<body>
+<script>document.documentElement.classList.add("js")</script>
+
+<header class="barre verre" id="barre">
+  <div class="marque">Hong Kong Palace</div>
+  <nav class="liens"><a href="#prestations">À la carte</a><a href="#maison">La maison</a><a href="#infos">Horaires et adresse</a></nav>
+  <a class="tel-pill" href="tel:0147770400">01 47 77 04 00</a>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <nav><a href="#prestations">À la carte</a><a href="#maison">La maison</a><a href="#infos">Horaires et adresse</a><a href="tel:0147770400">Appeler</a></nav>
+  <div class="pied">1 rue du Bel-Air · 92500 Rueil-Malmaison</div>
+</div>
+
+<main>
+  <section class="heros wrap">
+    <div class="grille">
+      <div>
+        <h1>L’authenticité <em>chinoise et thaïlandaise</em><br>à Rueil-Malmaison</h1>
+        <p class="sous">Hong Kong Palace sert une cuisine chinoise et thaïlandaise reconnue pour son authenticité, au cœur de Rueil-Malmaison. Ouvert tous les jours, midi et soir.</p>
+        <div class="boutons">
+          <a class="btn btn-plein" href="tel:0147770400">Appeler</a>
+          <a class="btn btn-verre" href="https://maps.google.com/?q=1+rue+du+Bel-Air+Rueil-Malmaison" target="_blank" rel="noopener">Itinéraire</a>
+        </div>
+      </div>
+      <div class="visuel"><div class="cadre"><img src="web/photo-2-760.jpg" sizes="(max-width:880px) 92vw, 48vw" alt="Salle du restaurant Hong Kong Palace, chaises en bois laqué sculpté de motifs chinois, moquette bordeaux et tables dressées de nappes blanches"></div></div>
+    </div>
+  </section>
+  <section id="prestations" class="wrap">
+    <div class="monte">
+      <div class="sur-titre">À la carte</div>
+      <h2 class="titre-sec">Deux cuisines,<br>une même adresse</h2>
+      <p class="intro">Carte détaillée et prix précis à demander directement au restaurant, au 01 47 77 04 00.</p>
+    </div>
+    <div class="rayon">
+      <article class="carte verre monte"><div class="rond">I</div><h3>Cuisine chinoise et thaïlandaise</h3><p>Hong Kong Palace réunit sur une même carte des plats chinois et des plats thaïlandais, une double identité culinaire plutôt rare pour un restaurant de Rueil-Malmaison.</p></article>
+      <article class="carte verre monte"><div class="rond">II</div><h3>Service midi et soir, tous les jours</h3><p>Le restaurant est ouvert sept jours sur sept, de 12 h à 14 h 30 puis de 19 h à 22 h 30, sans jour de fermeture dans la semaine.</p></article>
+      <article class="carte verre monte"><div class="rond">III</div><h3>Un décor traditionnel</h3><p>Chaises en bois laqué sculptées de motifs chinois, moquette bordeaux et nappes blanches : un décor qui affiche la couleur dès l&#x27;entrée.</p></article>
+      <article class="carte verre monte"><div class="rond">IV</div><h3>Référencé par l’office de tourisme</h3><p>Le restaurant figure sur le site officiel de l’office de tourisme de Rueil-Malmaison, qui recense les adresses de restauration de la ville.</p></article>
+    </div>
+  </section>
+
+  <section id="maison" class="wrap"><div class="monte">
+        <div class="sur-titre">La maison</div>
+        <h2 class="titre-sec">Une table chinoise et thaïlandaise<br>à Rueil-Malmaison</h2>
+        <p class="intro">Hong Kong Palace sert sa cuisine chinoise et thaïlandaise au 1 rue du Bel-Air, à Rueil-Malmaison. Les clients le décrivent comme une adresse fiable pour l’authenticité et la qualité de ses plats, avec 399 avis publiés en ligne. Le restaurant est ouvert tous les jours, midi et soir, sans interruption hebdomadaire.</p>
+        <div class="chiffres"><div><b>399</b><span>avis clients</span></div></div>
+      </div></section>
+
+  <section id="infos" class="wrap">
+    <div class="monte">
+      <div class="sur-titre">Venir</div>
+      <h2 class="titre-sec">Venir chez nous.</h2>
+    </div>
+    <div class="pratique">
+      <div class="panneau verre monte"><table class="horaires"><tr><td>Tous les jours</td><td>12 h à 14 h 30 et 19 h à 22 h 30</td></tr></table></div>
+      <div class="panneau verre monte">
+        <div class="sur-titre">Adresse</div>
+        <p class="adresse">1 rue du Bel-Air<br>92500 Rueil-Malmaison</p>
+        <a class="lien-souligne" href="https://maps.google.com/?q=1+rue+du+Bel-Air+92500+Rueil-Malmaison" target="_blank" rel="noopener">Ouvrir l'itinéraire</a><br>
+        <a class="lien-souligne" href="tel:0147770400">01 47 77 04 00</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="nom">Hong Kong Palace</div>
+  <p style="margin-top:8px;opacity:.75">1 rue du Bel-Air, 92500 Rueil-Malmaison · 01 47 77 04 00</p>
+</footer>
+
+<a class="appel verre" id="appel" href="tel:0147770400">
+  <span class="txt">Hong Kong Palace<b>01 47 77 04 00</b></span>
+  <span class="tel-pill">Appeler</span>
+</a>
+
+<script>(function(){
+  var b=document.getElementById('burger'), m=document.getElementById('menu'), appel=document.getElementById('appel');
+  function bascule(o){
+    o = o===undefined ? !document.body.classList.contains('menu-ouvert') : o;
+    document.body.classList.toggle('menu-ouvert', o);
+    b.setAttribute('aria-expanded', String(o));
+    b.setAttribute('aria-label', o ? 'Fermer le menu' : 'Ouvrir le menu');
+  }
+  b.addEventListener('click', function(){ bascule(); });
+  m.addEventListener('click', function(e){ if(e.target.tagName==='A') bascule(false); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') bascule(false); });
+
+  var tick=false;
+  addEventListener('scroll', function(){
+    if(tick) return; tick=true;
+    requestAnimationFrame(function(){ appel.classList.toggle('visible', scrollY>420); tick=false; });
+  }, {passive:true});
+
+})();
+</script>
+<script type="module">
+/* Motion — le moteur de Framer Motion, version sans React.
+   Ressorts pour tout ce qui est physique, fondu pour l'opacité.
+   Voir motiondesign/framer-motion.md : jamais width/height/top/left, uniquement
+   transform et opacity, et on respecte prefers-reduced-motion. */
+const CARTES  = ".carte, .panneau";
+const GROUPES = ".rayon, .pratique";
+const HEROS   = ".heros .grille > *";
+
+const calme = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const tactile = matchMedia("(max-width: 899px)").matches;
+
+function montrer(el){ el.style.opacity = 1; el.style.transform = "none"; }
+
+if (calme || tactile) {
+  /* Aucune animation demandée ici : on ne télécharge même pas la bibliothèque. */
+  document.querySelectorAll(".monte").forEach(montrer);
+} else try {
+  const { animate, inView, stagger, hover, scroll } =
+    await import("https://cdn.jsdelivr.net/npm/motion@13.4.3/+esm");
+
+  const ressort  = { type: "spring", stiffness: 260, damping: 30, mass: .9 };
+  const vif      = { type: "spring", stiffness: 520, damping: 32, mass: .6 };
+
+  {
+    /* 1. Entrée de la page : une seule séquence orchestrée, pas des effets éparpillés */
+    const entree = document.querySelectorAll(HEROS);
+    if (entree.length) {
+      animate(entree, { opacity: [0, 1], y: [26, 0], filter: ["blur(6px)", "blur(0px)"] },
+              { ...ressort, delay: stagger(0.09, { startDelay: 0.08 }) });
+    }
+
+    /* 2. Apparitions au défilement, en cascade à l'intérieur de chaque groupe */
+    document.querySelectorAll(GROUPES).forEach(groupe => {
+      const enfants = [...groupe.children].filter(e => e.classList.contains("monte"));
+      if (!enfants.length) return;
+      enfants.forEach(e => e.classList.remove("monte"));
+      enfants.forEach(e => { e.style.opacity = 0; });
+      inView(groupe, () => {
+        animate(enfants, { opacity: [0, 1], y: [24, 0] },
+                { ...ressort, delay: stagger(0.07) });
+      }, { amount: 0.15 });
+    });
+
+    document.querySelectorAll(".monte").forEach(el => {
+      el.style.opacity = 0;
+      inView(el, () => { animate(el, { opacity: [0, 1], y: [24, 0] }, ressort); },
+             { amount: 0.12 });
+    });
+
+    /* 3. Survol : un ressort, pas une transition linéaire. C'est là que ça se sent. */
+    document.querySelectorAll(CARTES).forEach(c => {
+      hover(c, () => {
+        animate(c, { y: -8, scale: 1.012 }, vif);
+        return () => animate(c, { y: 0, scale: 1 }, vif);
+      });
+    });
+
+    /* 4. La barre se resserre en suivant le défilement, pas par paliers */
+    const barre = document.getElementById("barre");
+    if (barre) {
+      scroll(progression => {
+        const t = Math.min(progression * 9, 1);
+        barre.style.transform = `translateX(-50%) scale(${1 - t * 0.022})`;
+      });
+    }
+  }
+} catch (e) {
+  /* CDN injoignable : on rend tout visible plutôt que de laisser une page blanche */
+  document.querySelectorAll(".monte").forEach(montrer);
+}
+
+</script>
+</body>
+</html>
