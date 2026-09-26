@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Los Niños — Boulogne-Billancourt</title>
+<meta name="description" content="Los Niños, salon de coiffure familial à Boulogne-Billancourt : coupes enfants, femmes, hommes et soins bio-cosmétiques, du mardi au samedi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --fond:#EEF3F1; --encre:#12201C; --encre-2:#546661; --encre-3:#849691;
+  --sauge:#2F6E5E; --sauge-clair:#4E9A85; --eau:#6C9CC4; --sable:#D8C9A8;
+  --r-xl:34px; --r-lg:26px; --r-md:18px;
+  --ease:cubic-bezier(.22,1,.36,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--encre);
+  background:
+    radial-gradient(72rem 54rem at 4% 2%, rgba(78,154,133,.34), transparent 60%),
+    radial-gradient(64rem 48rem at 98% 22%, rgba(108,156,196,.3), transparent 60%),
+    radial-gradient(56rem 44rem at 56% 96%, rgba(216,201,168,.32), transparent 60%),
+    var(--fond);
+  font-family:"Manrope",system-ui,sans-serif;font-size:16px;line-height:1.65;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:"Newsreader",Georgia,serif;font-weight:400;letter-spacing:-.015em;text-wrap:balance}
+.wrap{width:min(1140px,100% - 36px);margin-inline:auto}
+
+/* ——— lumières de fond : c'est ce que le verre réfracte ——— */
+.lueurs{position:fixed;inset:-18vmax;z-index:-2;pointer-events:none;filter:blur(58px);will-change:transform;transform:translateZ(0)}
+.lueurs i{position:absolute;display:block;border-radius:50%;opacity:.82}
+.l1{width:56vmax;height:56vmax;left:-8vmax;top:-6vmax;background:radial-gradient(circle,rgba(78,154,133,.68),transparent 66%);animation:derive1 34s ease-in-out infinite alternate}
+.l2{width:48vmax;height:48vmax;right:-6vmax;top:12vmax;background:radial-gradient(circle,rgba(108,156,196,.6),transparent 66%);animation:derive2 42s ease-in-out infinite alternate}
+.l3{width:42vmax;height:42vmax;left:26vmax;bottom:-10vmax;background:radial-gradient(circle,rgba(216,201,168,.6),transparent 66%);animation:derive3 38s ease-in-out infinite alternate}
+@keyframes derive1{to{transform:translate3d(9vmax,7vmax,0) scale(1.14)}}
+@keyframes derive2{to{transform:translate3d(-11vmax,9vmax,0) scale(1.1)}}
+@keyframes derive3{to{transform:translate3d(7vmax,-9vmax,0) scale(1.18)}}
+body::after{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:200;opacity:.38;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+}
+
+/* ——— verre ——— */
+.verre{
+  position:relative;
+  background:linear-gradient(142deg,rgba(255,255,255,.66),rgba(255,255,255,.3) 46%,rgba(255,255,255,.52));
+  -webkit-backdrop-filter:blur(26px) saturate(180%);backdrop-filter:blur(26px) saturate(180%);
+  border:1px solid rgba(255,255,255,.72);
+  box-shadow:0 22px 56px -26px rgba(18,32,28,.4),
+             inset 0 1px 0 rgba(255,255,255,.92),
+             inset 0 -1px 0 rgba(255,255,255,.34);
+  border-radius:var(--r-lg);
+}
+.verre::before{
+  content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+  background:linear-gradient(120deg,rgba(255,255,255,.56) 0%,rgba(255,255,255,0) 24%,rgba(255,255,255,0) 76%,rgba(255,255,255,.28) 100%);
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .verre{background:rgba(255,255,255,.92)}
+}
+
+/* ——— barre ——— */
+.barre{
+  position:fixed;z-index:120;left:50%;transform:translateX(-50%);
+  top:calc(16px + env(safe-area-inset-top,0px));
+  width:min(700px,calc(100% - 28px));
+  border-radius:999px;padding:8px 8px 8px 22px;
+  display:flex;align-items:center;gap:14px;
+  transition:width .45s var(--ease);
+}
+.barre.compacte{width:min(600px,calc(100% - 28px))}
+.marque{font-family:"Newsreader",serif;font-size:18px;font-weight:400;letter-spacing:-.01em;white-space:nowrap}
+.marque{margin-inline-end:auto}
+.liens{display:none;gap:28px;margin-inline:auto;font-size:14px;font-weight:500}
+.liens a{text-decoration:none;color:var(--encre-2);transition:color .25s}
+.liens a:hover{color:var(--sauge)}
+.tel-pill{
+  text-decoration:none;font-weight:600;font-size:13.5px;white-space:nowrap;
+  background:var(--sauge);color:#fff;padding:11px 18px;border-radius:999px;
+  box-shadow:0 8px 20px -8px rgba(47,110,94,.8);transition:transform .16s cubic-bezier(.3,.9,.3,1)
+}
+.tel-pill:hover{transform:translateY(-2px)}
+.burger{
+  width:44px;height:44px;flex:0 0 44px;cursor:pointer;border-radius:50%;
+  background:rgba(18,32,28,.06);border:1px solid rgba(18,32,28,.1);
+  display:grid;place-content:center;gap:4.5px;transition:background .25s
+}
+.burger:hover{background:rgba(18,32,28,.12)}
+.burger span{display:block;width:17px;height:1.7px;background:var(--encre);border-radius:2px;
+  transition:transform .45s var(--ease),opacity .25s}
+body.menu-ouvert .burger span:nth-child(1){transform:translateY(6.2px) rotate(45deg)}
+body.menu-ouvert .burger span:nth-child(2){opacity:0}
+body.menu-ouvert .burger span:nth-child(3){transform:translateY(-6.2px) rotate(-45deg)}
+@media (max-width:880px){.liens{display:none}}
+
+.menu{
+  position:fixed;inset:0;z-index:110;display:grid;place-content:center;
+  -webkit-backdrop-filter:blur(30px) saturate(160%);backdrop-filter:blur(30px) saturate(160%);
+  background:rgba(238,243,241,.76);
+  clip-path:circle(0% at calc(100% - 44px) 44px);transition:clip-path .78s var(--ease);
+}
+body.menu-ouvert .menu{clip-path:circle(150% at calc(100% - 44px) 44px)}
+.menu nav{display:flex;flex-direction:column;gap:2px;text-align:center}
+.menu a{font-family:"Newsreader",serif;font-size:clamp(34px,7vw,62px);text-decoration:none;
+  opacity:0;transform:translateY(20px);transition:opacity .5s var(--ease),transform .5s var(--ease),color .3s}
+.menu a:hover{color:var(--sauge)}
+body.menu-ouvert .menu a{opacity:1;transform:none}
+body.menu-ouvert .menu a:nth-child(1){transition-delay:.16s}
+body.menu-ouvert .menu a:nth-child(2){transition-delay:.23s}
+body.menu-ouvert .menu a:nth-child(3){transition-delay:.30s}
+body.menu-ouvert .menu a:nth-child(4){transition-delay:.37s}
+.menu .pied{margin-top:34px;text-align:center;font-size:14px;color:var(--encre-2);opacity:0;transition:opacity .5s .44s}
+body.menu-ouvert .menu .pied{opacity:1}
+body.menu-ouvert{overflow:hidden}
+
+/* ——— héros centré ——— */
+.heros{padding-top:calc(150px + env(safe-area-inset-top,0px));padding-bottom:clamp(30px,6vw,70px);text-align:center}
+.etiquette{display:inline-flex;align-items:center;gap:9px;padding:8px 17px;border-radius:999px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--sauge)}
+.point{width:7px;height:7px;border-radius:50%;background:var(--sauge-clair);box-shadow:0 0 0 0 rgba(78,154,133,.6);animation:pouls 2.6s infinite}
+@keyframes pouls{70%{box-shadow:0 0 0 10px rgba(78,154,133,0)}100%{box-shadow:0 0 0 0 rgba(78,154,133,0)}}
+.heros h1{font-size:clamp(42px,7.4vw,92px);line-height:1;margin:22px auto 0;max-width:15ch;font-weight:300}
+.heros h1 em{font-style:italic;color:var(--sauge)}
+.sous{max-width:50ch;margin:20px auto 0;font-size:clamp(15px,1.7vw,18px);color:var(--encre-2)}
+.boutons{display:flex;flex-wrap:wrap;gap:11px;margin-top:30px;justify-content:center}
+.btn{text-decoration:none;font-weight:600;font-size:15px;padding:15px 30px;border-radius:999px;transition:transform .16s cubic-bezier(.3,.9,.3,1),box-shadow .16s ease-out}
+.btn-plein{background:var(--sauge);color:#fff;box-shadow:0 14px 34px -14px rgba(47,110,94,.85)}
+.btn-plein:hover{transform:translateY(-3px);box-shadow:0 20px 42px -16px rgba(47,110,94,.9)}
+.btn-verre{border:1px solid rgba(18,32,28,.14);background:rgba(255,255,255,.5);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+.btn-verre:hover{transform:translateY(-3px);background:rgba(255,255,255,.82)}
+
+/* ——— bandeau de verre : les trois repères ——— */
+.reperes{display:grid;grid-template-columns:repeat(3,1fr);margin-top:clamp(36px,6vw,64px);border-radius:var(--r-xl);overflow:hidden}
+.repere{padding:26px 22px;text-align:center;border-right:1px solid rgba(255,255,255,.55)}
+.repere:last-child{border-right:0}
+.repere b{display:block;font-family:"Newsreader",serif;font-size:clamp(26px,3.4vw,38px);font-weight:400;line-height:1}
+.repere span{display:block;font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--encre-2);margin-top:7px}
+@media (max-width:680px){.reperes{grid-template-columns:1fr}.repere{border-right:0;border-bottom:1px solid rgba(255,255,255,.55)}.repere:last-child{border-bottom:0}}
+
+/* ——— sections ——— */
+section{padding-block:clamp(44px,5.6vw,84px)}
+.sur-titre{font-size:11.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--sauge);margin-bottom:13px}
+.titre-sec{font-size:clamp(29px,4.4vw,54px);line-height:1.04;font-weight:300}
+.intro{max-width:52ch;color:var(--encre-2);margin-top:16px}
+
+.soins{display:grid;grid-template-columns:repeat(auto-fit,minmax(258px,1fr));gap:14px;margin-top:40px}
+.soin{padding:28px 26px 30px;border-radius:var(--r-lg);transition:transform .45s var(--ease)}
+.soin:hover{transform:translateY(-7px)}
+.soin .rond{width:38px;height:38px;border-radius:50%;background:rgba(47,110,94,.12);border:1px solid rgba(47,110,94,.22);
+  display:grid;place-content:center;font-family:"Newsreader",serif;font-size:15px;color:var(--sauge)}
+.soin h3{font-size:24px;margin:16px 0 9px;font-weight:400}
+.soin p{margin:0;font-size:14.5px;color:var(--encre-2)}
+
+.parcours{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:40px}
+.etape{padding:26px 26px 28px;border-radius:var(--r-lg)}
+.etape .n{font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--encre-3)}
+.etape h3{font-size:21px;margin:8px 0 8px;font-weight:400}
+.etape p{margin:0;font-size:14.5px;color:var(--encre-2)}
+@media (max-width:760px){.parcours{grid-template-columns:1fr}}
+
+.pratique{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:38px}
+.panneau{padding:clamp(22px,3vw,34px);border-radius:var(--r-lg)}
+.horaires{width:100%;border-collapse:collapse;font-size:15px}
+.horaires td{padding:11px 0;border-bottom:1px solid rgba(18,32,28,.09)}
+.horaires tr:last-child td{border-bottom:0}
+.horaires td:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--encre-2)}
+.horaires tr.actif td{font-weight:600;color:var(--encre)}
+.adresse{font-family:"Newsreader",serif;font-size:clamp(21px,2.5vw,29px);line-height:1.24;font-weight:400}
+.lien-souligne{display:inline-block;margin-top:13px;text-decoration:none;border-bottom:1.5px solid var(--sauge);padding-bottom:3px;font-size:15px;font-weight:500;transition:color .3s}
+.lien-souligne:hover{color:var(--sauge)}
+@media (max-width:760px){.pratique{grid-template-columns:1fr}}
+
+footer{padding-block:clamp(44px,7vw,80px) calc(96px + env(safe-area-inset-bottom,0px));border-top:1px solid rgba(18,32,28,.09);text-align:center}
+footer .nom{font-family:"Newsreader",serif;font-size:clamp(28px,5.2vw,56px);font-weight:300}
+footer .mentions{font-size:12.5px;color:var(--encre-3);margin-top:24px;max-width:60ch;margin-inline:auto}
+
+.appel{
+  position:fixed;z-index:115;left:50%;transform:translate(-50%,130%);
+  bottom:calc(14px + env(safe-area-inset-bottom,0px));width:min(430px,calc(100% - 24px));
+  border-radius:999px;padding:8px 8px 8px 20px;display:none;align-items:center;justify-content:space-between;gap:12px;
+  text-decoration:none;transition:transform .5s var(--ease);
+}
+.appel.visible{transform:translate(-50%,0)}
+.appel .txt{font-size:12.5px;line-height:1.3;color:var(--encre-2)}
+.appel .txt b{display:block;font-family:"Newsreader",serif;font-size:16px;font-weight:400;color:var(--encre)}
+@media (max-width:820px){.appel{display:flex}}
+
+/* Fluidite : flou de fond conserve sur la barre, le menu et les reperes uniquement. */
+.soin,.etape,.panneau{-webkit-backdrop-filter:none;backdrop-filter:none;background:rgba(255,255,255,.58)}
+.soin::before,.etape::before,.panneau::before{opacity:.5}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition-duration:.01ms!important}
+  .monte{opacity:1;transform:none}
+}
+
+/* ═════ Barre : le bouton à trois barres reste seul, à toutes les tailles ═════ */
+@media (min-width:900px){
+  .barre{width:min(1000px,calc(100% - 28px))}
+  .barre.compacte{width:min(860px,calc(100% - 28px))}
+  .marque{margin-inline-end:auto}
+}
+@media (max-width:899px){
+  .marque{margin-inline-end:auto}
+  /* sur téléphone : le menu s'ouvre net, sans animation */
+  .menu{clip-path:none;opacity:0;visibility:hidden;transition:opacity .16s linear,visibility .16s}
+  body.menu-ouvert .menu{clip-path:none;opacity:1;visibility:visible}
+  .menu a,.menu .pied{opacity:1;transform:none;transition:none}
+  body.menu-ouvert .menu a{transition-delay:0s}
+}
+
+/* ═════ Les cartes réagissent au survol — ordinateur uniquement ═════ */
+@media (hover:hover) and (pointer:fine){
+  .soin,.etape{overflow:hidden;
+    transition:transform .16s cubic-bezier(.3,.9,.3,1),box-shadow .16s ease-out}
+  .soin::after,.etape::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+    background:linear-gradient(112deg,transparent 34%,rgba(255,255,255,.22) 48%,transparent 62%);
+    transform:translateX(-130%);transition:transform .42s cubic-bezier(.3,.9,.3,1)}
+  .soin:hover::after,.etape:hover::after{transform:translateX(130%)}
+  .soin:hover,.etape:hover{transform:translateY(-8px)}
+}
+
+/* ═════ Motion : le JS pilote le mouvement, le CSS ne fait que l'état de repos ═════
+   Sans JS (CDN injoignable, script bloqué), rien n'est caché : la page reste lisible. */
+.js .monte{opacity:0}
+.js .soin, .etape, .panneau{transition-property:box-shadow,background,border-color;transition-duration:.16s}
+.js .soin, .etape, .panneau:hover{transform:none}
+@media (max-width:899px){ .js .monte{opacity:1} }
+
+/* Le numéro n'apparaît qu'une fois. Dès que la barre d'appel du bas existe
+   (820 px), celui de la barre du haut disparaît — et jamais l'inverse :
+   .appel .tel-pill doit rester visible, c'est le bouton « Appeler ». */
+@media (max-width:820px){
+  .barre .tel-pill{display:none}
+  .appel .tel-pill{display:inline-flex;align-items:center}
+}
+
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Los Niños", "address": {"@type": "PostalAddress", "streetAddress": "48 rue Escudier", "postalCode": "92100", "addressLocality": "Boulogne-Billancourt", "addressCountry": "FR"}, "telephone": "01 55 60 99 90", "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "19:00"}], "image": "img/photo-3.jpg"}</script>
+</head>
+<body>
+<script>document.documentElement.classList.add("js")</script>
+
+<header class="barre verre" id="barre">
+  <div class="marque">Los Niños</div>
+  <nav class="liens"><a href="#prestations">Prestations</a><a href="#maison">La maison</a><a href="#infos">Horaires et adresse</a></nav>
+  <a class="tel-pill" href="tel:0155609990">01 55 60 99 90</a>
+  <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu">
+  <nav><a href="#prestations">Prestations</a><a href="#maison">La maison</a><a href="#infos">Horaires et adresse</a><a href="tel:0155609990">Appeler</a></nav>
+  <div class="pied">48 rue Escudier · 92100 Boulogne-Billancourt</div>
+</div>
+
+<main>
+  <div class="lueurs" aria-hidden="true"><i class="l1"></i><i class="l2"></i><i class="l3"></i></div>
+  <section class="heros wrap">
+    <div class="monte">
+      <h1>Los Niños,<br><em>coiffeur de famille</em></h1>
+      <p class="sous">Un salon de coiffure familial au 48 rue Escudier, à Boulogne-Billancourt : coupes enfants, femmes et hommes, avec des soins bio-cosmétiques.</p>
+      <div class="boutons">
+        <a class="btn btn-plein" href="tel:0155609990">Appeler</a>
+        <a class="btn btn-verre" href="#infos">Voir les horaires</a>
+      </div>
+    </div>
+    <div class="reperes verre monte"><div class="repere"><b>48 rue Escudier</b><span></span></div><div class="repere"><b>Enfants, femmes, hommes</b><span></span></div><div class="repere"><b>Mardi à samedi, 10 h à 19 h</b><span></span></div></div>
+  </section>
+  <section id="prestations" class="wrap">
+    <div class="monte">
+      <div class="sur-titre">Au salon</div>
+      <h2 class="titre-sec">Des coupes<br>pour toute la famille</h2>
+      <p class="intro">Tarifs communiqués sur place — aucun prix n’est publié en ligne à ce jour.</p>
+    </div>
+    <div class="soins">
+      <article class="soin verre monte"><div class="rond">I</div><h3>Coupes enfants</h3><p>Los Niños reçoit les enfants pour leurs coupes, dans un salon pensé pour toute la famille — pas besoin de changer d’adresse en grandissant.</p></article>
+      <article class="soin verre monte"><div class="rond">II</div><h3>Coupes femmes</h3><p>Coupe et coiffage pour femmes, avec les mêmes soins bio-cosmétiques que le reste du salon, du mardi au samedi.</p></article>
+      <article class="soin verre monte"><div class="rond">III</div><h3>Coupes hommes</h3><p>Coupe homme à la même adresse que les rendez-vous enfants et femmes — pratique pour un rendez-vous pris en famille.</p></article>
+      <article class="soin verre monte"><div class="rond">IV</div><h3>Soins bio-cosmétiques</h3><p>Le salon annonce des soins bio-cosmétiques pour ses coupes et coiffages, une alternative aux gammes capillaires classiques.</p></article>
+    </div>
+  </section>
+
+  <section id="maison" class="wrap">
+    <div class="duo">
+      <div class="photo monte"><img src="web/photo-1-550.jpg" sizes="(max-width:880px) 92vw, 52vw" alt="La façade du salon Los Niños, avec l’enseigne « Los niños », le bouquet d’hortensias en vitrine et le panneau des horaires affiché près de la porte d’entrée." loading="lazy" decoding="async"></div>
+      <div class="monte">
+        <div class="sur-titre">La maison</div>
+        <h2 class="titre-sec">Un salon<br>pensé pour la famille</h2>
+        <p class="intro">Los Niños est un salon de quartier, au 48 rue Escudier. Sa vitrine l’annonce clairement : « Coiffeur de Famille ». Les rendez-vous enfants, femmes et hommes se prennent au même endroit, avec des soins bio-cosmétiques plutôt que les gammes classiques.</p>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="infos" class="wrap">
+    <div class="monte">
+      <div class="sur-titre">Venir</div>
+      <h2 class="titre-sec">Venir chez nous.</h2>
+    </div>
+    <div class="pratique">
+      <div class="panneau verre monte"><table class="horaires"><tr><td>Mardi à samedi</td><td>10 h à 19 h</td></tr></table></div>
+      <div class="panneau verre monte">
+        <div class="sur-titre">Adresse</div>
+        <p class="adresse">48 rue Escudier<br>92100 Boulogne-Billancourt</p>
+        <a class="lien-souligne" href="https://maps.google.com/?q=48+rue+Escudier+92100+Boulogne-Billancourt" target="_blank" rel="noopener">Ouvrir l'itinéraire</a><br>
+        <a class="lien-souligne" href="tel:0155609990">01 55 60 99 90</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap">
+  <div class="nom">Los Niños</div>
+  <p style="margin-top:8px;opacity:.75">48 rue Escudier, 92100 Boulogne-Billancourt · 01 55 60 99 90</p>
+</footer>
+
+<a class="appel verre" id="appel" href="tel:0155609990">
+  <span class="txt">Los Niños<b>01 55 60 99 90</b></span>
+  <span class="tel-pill">Appeler</span>
+</a>
+
+<script>(function(){
+  var b=document.getElementById('burger'), m=document.getElementById('menu'), appel=document.getElementById('appel');
+  function bascule(o){
+    o = o===undefined ? !document.body.classList.contains('menu-ouvert') : o;
+    document.body.classList.toggle('menu-ouvert', o);
+    b.setAttribute('aria-expanded', String(o));
+    b.setAttribute('aria-label', o ? 'Fermer le menu' : 'Ouvrir le menu');
+  }
+  b.addEventListener('click', function(){ bascule(); });
+  m.addEventListener('click', function(e){ if(e.target.tagName==='A') bascule(false); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') bascule(false); });
+
+  var tick=false;
+  addEventListener('scroll', function(){
+    if(tick) return; tick=true;
+    requestAnimationFrame(function(){ appel.classList.toggle('visible', scrollY>420); tick=false; });
+  }, {passive:true});
+
+})();
+</script>
+<script type="module">
+/* Motion — le moteur de Framer Motion, version sans React.
+   Ressorts pour tout ce qui est physique, fondu pour l'opacité.
+   Voir motiondesign/framer-motion.md : jamais width/height/top/left, uniquement
+   transform et opacity, et on respecte prefers-reduced-motion. */
+const CARTES  = ".soin, .etape, .panneau";
+const GROUPES = ".soins, .pratique";
+const HEROS   = ".heros > .monte, .heros .reperes";
+
+const calme = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const tactile = matchMedia("(max-width: 899px)").matches;
+
+function montrer(el){ el.style.opacity = 1; el.style.transform = "none"; }
+
+if (calme || tactile) {
+  /* Aucune animation demandée ici : on ne télécharge même pas la bibliothèque. */
+  document.querySelectorAll(".monte").forEach(montrer);
+} else try {
+  const { animate, inView, stagger, hover, scroll } =
+    await import("https://cdn.jsdelivr.net/npm/motion@13.4.3/+esm");
+
+  const ressort  = { type: "spring", stiffness: 260, damping: 30, mass: .9 };
+  const vif      = { type: "spring", stiffness: 520, damping: 32, mass: .6 };
+
+  {
+    /* 1. Entrée de la page : une seule séquence orchestrée, pas des effets éparpillés */
+    const entree = document.querySelectorAll(HEROS);
+    if (entree.length) {
+      animate(entree, { opacity: [0, 1], y: [26, 0], filter: ["blur(6px)", "blur(0px)"] },
+              { ...ressort, delay: stagger(0.09, { startDelay: 0.08 }) });
+    }
+
+    /* 2. Apparitions au défilement, en cascade à l'intérieur de chaque groupe */
+    document.querySelectorAll(GROUPES).forEach(groupe => {
+      const enfants = [...groupe.children].filter(e => e.classList.contains("monte"));
+      if (!enfants.length) return;
+      enfants.forEach(e => e.classList.remove("monte"));
+      enfants.forEach(e => { e.style.opacity = 0; });
+      inView(groupe, () => {
+        animate(enfants, { opacity: [0, 1], y: [24, 0] },
+                { ...ressort, delay: stagger(0.07) });
+      }, { amount: 0.15 });
+    });
+
+    document.querySelectorAll(".monte").forEach(el => {
+      el.style.opacity = 0;
+      inView(el, () => { animate(el, { opacity: [0, 1], y: [24, 0] }, ressort); },
+             { amount: 0.12 });
+    });
+
+    /* 3. Survol : un ressort, pas une transition linéaire. C'est là que ça se sent. */
+    document.querySelectorAll(CARTES).forEach(c => {
+      hover(c, () => {
+        animate(c, { y: -8, scale: 1.012 }, vif);
+        return () => animate(c, { y: 0, scale: 1 }, vif);
+      });
+    });
+
+    /* 4. La barre se resserre en suivant le défilement, pas par paliers */
+    const barre = document.getElementById("barre");
+    if (barre) {
+      scroll(progression => {
+        const t = Math.min(progression * 9, 1);
+        barre.style.transform = `translateX(-50%) scale(${1 - t * 0.022})`;
+      });
+    }
+  }
+} catch (e) {
+  /* CDN injoignable : on rend tout visible plutôt que de laisser une page blanche */
+  document.querySelectorAll(".monte").forEach(montrer);
+}
+
+</script>
+</body>
+</html>
